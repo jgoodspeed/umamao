@@ -19,3 +19,5 @@ vendor/cache
 public/stylesheets/compiled
 public/assets
 .rvmrc
+
+nbproject
