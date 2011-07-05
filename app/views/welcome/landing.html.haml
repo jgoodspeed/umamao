@@ -24,16 +24,16 @@
 
 #title_landingpage
 
-  %h1 Qualquer pergunta, não qualquer resposta.
+  %h1 Stock talk without the noise...
 
 #content
 
   %p
 
-    O Umamão é uma base de perguntas e respostas
-    expandida e melhorada constantemente por acadêmicos e
-    profissionais. Temos orgulho de produzir conteúdo de
-    qualidade.
+    StockCrunch is a question and answer forum for the stock market and economy.
+    Constantly expanded and improved upon by moderators and professionals,
+    StockCrunch seeks to fix the broken 'stock bulletin board' and become
+    a quality resource for investors.
 
   %p
     %strong
@@ -42,18 +42,18 @@
       Umamão é para você.
 
   %p
-    = link_to 'Veja os tópicos mais populares do Umamão!', topics_path
+    = link_to 'See the most popular topics on StockCrunch!', topics_path
 
   %p
     .quote
-      O Umamão é uma ótima oportunidade para tirar suas dúvidas
-      e ajudar seus amigos respondendo às deles. Aproveitem
-      as explicações de aluno para aluno!
+      StockCrunch is a great opportunity to create a community
+      for investors where there is actually quality dialogue.
+
   %p
     .quote_author
       %strong
-        Rodolfo Azevedo
-      , professor do Instituto de Computação da Unicamp e usuário do Umamão
+        Warren Buffet
+      , legendary investor
 
 
 #signup
@@ -72,12 +72,8 @@
         #help-box
           %p
 
-            Precisamos do seu email acadêmico (algo como
-            seunome@suauniversidade.br) para confirmar seu vínculo com
-            a universidade (você pode escolher um email pessoal para
-            fazer login e receber atualizações depois).  Se você não
-            possui um, deixe o seu email pessoal que entraremos em
-            contato.
+            We need your email to create your account and
+            send an acitvation email.
       = image_tag("mamaopq.png", :id => "mamao_signup")
       .submit
         = image_tag("ajax-loader.gif", :id => "ajax-loader", :class => "hidden")
@@ -85,10 +81,9 @@
 
 #content_msg
   %p
-    Alunos e professores da
+    Financial Advisors, Traders and Gurus...
     %strong
-      = %w[USP Unicamp Unesp UFRJ UFMG UFBA PUC-Rio UFPI].map{ |uni| link_to(uni, topic_path(uni), :target => '_blank') }.join(', ')
-    e de muitas outras universidades já estão usando o Umamão!
+      StockCrunch is a great place to meet investors and contribute to the community.
     %br
-    Junte-se a nós!
+    Join today!
 
