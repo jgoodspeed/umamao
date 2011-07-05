@@ -49,13 +49,13 @@ base: &common
     api_key: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
 
   facebook:
-    app_id: 101010101010101
-    key: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    secret: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    app_id: 243527262325967
+    key: 243527262325967|2.AQCUIjtF8Toxl3la.3600.1309842000.0-721380704|7xsB7_kMcAgiC7bj4cPAccFAWe8
+    secret: 86dca16fffd3383e11a7a5adfbed7a05
 
   twitter:
-    key: aaaaaaaaaaaaaaaaaaaaa
-    secret: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    key: 2VCKwp0YH0HVl7wAGVuYXw
+    secret: Vi1l3YA2kEAZe3HkINowQW9w4oSMwJZQOYffecKnEo
 
   exception_notification:
     activate: true
