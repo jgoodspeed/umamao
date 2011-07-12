@@ -1,0 +1,8 @@
+en:
+  answer_requests:
+    new:
+      invite_form: Invite
+      input: Enter your name
+      message: Message (optional)
+      request_answer: Request response
+      title: Invite user to respond

@@ -1,85 +1,144 @@
 en:
   users:
+    inline_edition:
+      empty_bio: Short biography is empty, write it down!
+      empty_description: Long biography is empty, write it down!
+    validation:
+      errors:
+        did_not_agree: |
+          You must agree to the terms of use and privacy policy
+        empty_name: Name can not be empty
+        long_name: Name can not exceed 100 characters
+        empty_email: Email can not be empty
+        dup_email: This email already exists on the site
+        invalid_email: This email is invalid
+        password_match: The password does not match
+        invalid_password: The password is invalid
+        empty_password: The password is empty
+        long_bio: Short biography can not exceed 140 characters
+        long_description: Long biography can not exceed 500 characters
     index:
       title: All users
-      empty: "This group does not have any members. Participate by joining this group."
-      filter: "Search for users"
+      empty: "Not a user yet? Join in by signing up."
+      filter: "Search Users"
       reputation: Reputation
-      newest: Newest
-      oldest: Oldest
+      newest: Recent
+      oldest: Older
       name: Name
-      reputation_tooltip: Users sorted by higher reputation
-      newest_tooltip: Users who just joined
-      oldest_tooltip: Users who were the first to join
-      name_tooltip: Users sorted alphabetically
+      reputation_tooltip: "Users sorted by reputation"
+      newest_tooltip: "Users who have just signed up"
+      oldest_tooltip: "Users who entered first"
+      name_tooltip: "Users in alphabetical order"
     new:
-      title: Sign up as a new user
-      submit: Sign up
+      title: Create Account
+      submit: Create Account
+      invitation:
+          title: "You came at the invitation of %{user}"
+      affiliation_message: "Your email  address %{email} has been confirmed!  Now just finish your registration by filling out the form below."
+      agree: |
+        I have read and agree with the policy <a href="%{privacy}" target="_blank">Privacy</a>
+        and the <a href="%{tos}" target="_blank">terms of use</a> site.
+      already_registered: Already have an account at StockCrunch? <a href="/users/login">Login</a> to enter.
+    news_update:
+      question:
+        user:
+          created: "%{origin} added a question."
+        topic:
+          creates: "Question added to the topic %{origin}."
+      answer:
+        user:
+          created: "%{origin} added a response."
+        topic:
+          created: "Response to the topic added %{origin}."
     edit:
-      title: Settings
+      title: Configuration
       submit: Save
-      enable_twitter: Enable your Facebook or Twitter accounts
+      enable_twitter: Connect your Twitter accounts and Facebook
     show:
-      title: "User %{user}"
-      follow: Follow
-      unfollow: Unfollow
-      views: views
-    follow:
-      flash_notice: "The user %{user} was added to your friends"
-    unfollow:
-      flash_notice: "The user %{user} was removed from your friends"
+      title: "%{user}"
+      views: visits
+      profile: Profile
+      tab:
+        news_updates: Updates
+        questions: Questions
+        answers: Answers
+      no_news_updates: No updates yet.
+      no_questions: No questions yet.
+      no_answers: No answers yet.
+      atom:
+        title: "%{site_name} - Updates %{user}"
+        question: "Question:"
+        answer: "Answer:"
     form:
-      information: Information
-      notifications: Notifications
-      new_answer_notification: Get email notifications for new answers
-      give_advice_notification: Receive email notifications about questions in your field of expertise
-      activities_notification: Receive email notifications about system activities such as new followers, etc.
-      reports_notification: Receive a report with latest group activity (only for group admins)
-      avatar_tip: "Change your profile image using Gravatar"
+      change_password: Change password
+      email: "Personal email"
+      academic_email: "Academic Email"
+      name: "Name:"
+      password: "Password:"
+      password_confirmation: "Repeat password"
+      information: Personal Information
+      notifications: Receive emails
+      new_answer_notification: New Answers
+      give_advice_notification: Questions on my topics of interest
+      activities_notification: "system activity: new followers, medals won, etc.."
+      reports_notification: report of latest activity of the site (for admins only)
+      avatar_tip: "Change your profile picture"
       show_more_lang: "Show more languages"
+      university: "University"
+    annoying:
+      unconfirmed_non_academic_email: "You have not yet confirmed your e-mail address!"
+      resend_confirmation_email: "Resend confirmation e-mail."
+      resent_confirmation: "Check your e-mail address!"
     create:
-      flash_notice: "Thanks for signing up!"
-      flash_error:  "Sorry, we could not set up that account. Please try again, or contact an administrator (link is above)."
-      confirm: "ty"
+      flash_error: "Sorry, it was possible to create your account. Try again or contact us (in the feedback link at the bottom of the page)."
+      welcome: "Registration done. Welcome to StockCrunch!"
+      confirm: "Thank you for registering! Before you enter, you must confirm your email address. Soon you should receive an email with a link to confirmation"
     messages:
       errors:
-        reputation_needed: "You need a reputation of %{min_reputation} to %{action}"
+        reputation_needed: "You need at least %{min_reputation} reputation to %{action}"
     actions:
-      vote_up: Vote up
-      vote_down: Vote down
-      flag: Flag
-      edit_others_posts: "Edit other's posts"
-      edit_wiki_post: "Edit wiki posts"
-      retag_others_questions: "Retag others questions"
-      vote_to_close_own_question: "Request closing own question"
-      vote_to_close_any_question: "Request closing any question"
+      vote_up: give positive vote
+      vote_down: give negative vote
+      flag: report
+      edit_others_posts: "edit other entries"
+      edit_wiki_post: "edit wiki posts"
+      retag_others_questions: "retag other questions"
+      vote_to_close_own_question: "vote to close my question"
+      vote_to_close_any_question: "vote to close questions"
   activerecord:
     models:
       users: Users
       user: User
     attributes:
       user:
-        login: Username
+        login: Login
         email: Email
-        name: Real name
-        current_password: Current password
+        academic_email: Academic Email
+        name: Name
+        current_password: Current Password
         password: Password
-        password_confirmation: Password confirmation
-        created_at: created at
-        updated_at: updated at
-        activation_code: Activation code
-        activated_at: activated at
-        fullname: Full name
+        password_confirmation: Repeat Password
+        created_at: created
+        updated_at: updated
+        activation_code: activation code
+        activated_at: activated
         language: Language
         asked_by: asked by
-        timezone: Time zone
-        preferred_tags: Preferred tags
-        preferred_languages: Select the languages you know
-        last_logged_at: seen
-        created_at: joined
-        reputation: Reputation
-        avatar: Profile image
+        timezone: time-zone
+        preferred_tags: Topics followed
+        preferred_languages: Select your language
+        last_logged_at: last logged in
+        created_at: entered at
+        reputation: reputation
+        avatar: Photo
         language_filter: Filter by language
         website: Website
         birthday: Birthday
         age: Age
+        bio: Short Biography
+        description: Long Biography
+        location: Location
+        gender:
+          title: Gender
+          male: Male
+          female: Female

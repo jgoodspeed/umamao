@@ -1,0 +1,7 @@
+en:
+  notifications:
+    new_answer: "%{user} answered the question \"%{question}\""
+    new_comment: "%{user} commented on the question \"%{question}\""
+    new_question: "%{user} asked \"%{question}\" on topic %{topic}."
+    follow: "%{user} is following you in StockCrunch"
+    new_answer_request: "%{user} asked you to answer the question \"%{question}\""

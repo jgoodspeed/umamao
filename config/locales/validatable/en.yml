@@ -1,0 +1,10 @@
+en:
+   validatable:
+     "can't be empty": "can not be empty"
+     "has already been taken": "already been registered"
+     "is not in the list": "not in the list "
+     "must be accepted": "must be accepted "
+     "is invalid": "is invalid"
+     "is reserved": "is reserved"
+     "must be a number": "must be a plain number"
+     "does not match confirmation": "Does not match confirmation"

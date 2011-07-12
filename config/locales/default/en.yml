@@ -1,0 +1,173 @@
+en:
+# Date formats and time
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d of %B"
+      long: "%d of %B %Y"
+
+    day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+    abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+    order: [:day, :month, :year]
+
+  time:
+    formats:
+      default: "%A, %d of %B %Y, %H:%M h"
+      short: "%d/%m, %H:%M h"
+      long: "%A, %d of  %B %Y, %H:%M h"
+    am: ""
+    pm: ""
+
+  new_feature: "NEW!"
+
+  # Distance from the time in words
+  datetime:
+    distance_in_words:
+      half_a_minute: 'half a minute'
+      less_than_x_seconds:
+        one: 'less then a second'
+        other: '< %{count} seconds'
+
+      x_seconds:
+        one: '1 second '
+        other: '%{count} seconds'
+
+      less_than_x_minutes:
+        one: 'less then a minute'
+        other: '< %{count} minutes'
+
+      x_minutes:
+        one: '1 Minute '
+        other: '%{count} minutes'
+
+      about_x_hours:
+        one: 'about 1 hour'
+        other: '~%{count} hours'
+
+      x_days:
+        one: '1 day '
+        other: '%{count} days'
+
+      about_x_months:
+        one: 'about a month'
+        other: '~%{count} months'
+
+      x_months:
+        one: '1 month'
+        other: '%{count} months'
+
+      about_x_years:
+        one: 'about a year'
+        other: '~ %{count} years'
+
+      over_x_years:
+        one: 'more than 1 year'
+        other: 'over %{count} years'
+
+      almost_x_years:
+        one: 'almost one year'
+        other: 'almost %{count} years'
+
+    prompts:
+      year: "Year"
+      month: "Month"
+      day: "Day"
+      hour: "Hour"
+      minute: "Minute"
+      second: "Second"
+
+  # Figures
+  number:
+    format:
+      precision: 3
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: '$'
+        precision: 2
+        format: '%u %n'
+        separator: ','
+        delimiter: '.'
+    percentage:
+      format:
+        delimiter: '.'
+    precision:
+      format:
+        delimiter: '.'
+    human:
+      format:
+        precision: 2
+        delimiter: '.'
+        significant: true
+        strip_unsignificant_zeros: true
+      # Number_to_human_size ()
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            One: "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+      # Number_to_human ()
+      # 3 new in rails: please add to other locales
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: "thousand"
+          million:
+            one: million
+            other: millions
+          billion:
+            one: billion
+            other: billions
+          trillion:
+            one: trillion
+            other: trillions
+          quadrillion:
+            one: quadrillion
+            other: quadrillions
+
+  # Used in Array.to_sentence
+  support:
+    array:
+      words_connector: ","
+      two_words_connector: " "
+      last_word_connector: " "
+
+  # ActiveRecord
+  activerecord:
+    errors:
+      template:
+        header:
+          one: "model: an error"
+          other: "errors."
+        body: "Please check following field (s):"
+      messages:
+        inclusion: "do not include in the list"
+        exclusion: "not available"
+        invalid: "invalid"
+        confirmation: "selection confirmed"
+        accepted: "must be accepted"
+        empty: "cannot be empty"
+        blank: "cannot be blank"
+        too_long: "maximum %{count} characters"
+        too_short: "minimum: %{count} characters"
+        wrong_length: "not the expected size %{count} characters"
+        taken: "in use"
+        not_a_number: "not a number"
+        not_an_integer: "not an integer"
+        greater_than: "must be greater than %{count}"
+        greater_than_or_equal_to: "must be greater than or equal to %{count}"
+        equal_to: "must be equal to %{count}"
+        less_than: "must be less than %{count}"
+        less_than_or_equal_to: "must be less than or equal to %{count}"
+        odd: "must be odd"
+        even: "must be even"
+        record_invalid: "The validation failed: %{errors}"

@@ -1,0 +1,38 @@
+en:
+   universities:
+     index:
+       title: All universities
+       empty: "This site do not have any university. "
+       filter: "Search for Universities"
+       newest: Recent
+       oldest: Older
+       name: Name
+     new:
+       title: Add University
+       submit: Add University
+     edit:
+       title: Configuration
+       submit: Save
+     show:
+       title: "%{university}"
+     form:
+       name: "Name: "
+       sig: "Acronym"
+       state: "State:"
+       open_for_signup: "Open for Sign Up"
+       validation_type: "type Validates:"
+       email_regexp: "Mail Format (Regexp)"
+     create:
+       welcome: "Added University"
+   activerecord:
+     models:
+       universities: Universities
+       university: University
+     attributes:
+       user:
+         name: Name
+         sig: Abbreviation
+         state: State
+         open_for_signup: "Open for Sign Up"
+         validation_type: "type Validates"
+         email_regexp: "Mail Format (Regexp)"

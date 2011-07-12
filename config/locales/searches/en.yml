@@ -1,10 +1,43 @@
 en:
   searches:
     index:
-      empty: "Your search did not match any questions."
-      tags: within these tags
+      empty: "Did not find any results for your search."
+      tags: in these topics
       search_text: Questions containing
+      title: Search
+      form:
+        detail: Advanced search
+        categories: Search for
+        send: Search
     form:
       clear: Clear
-      search_box_title: "Check whether your question has already been asked"
-      tags_tip: Use [tag] to specify tags.
+      search_box_title: "See if your question has already been answered by someone"
+      tags_tip: Use [topic] or [stock symbol] to specify topics or stocks.
+      search_all: "search for questions, stocks, topics and users"
+      follow_topics: Search topics
+      ignore_topics: Search topics
+      select_topics: Select topics
+    question:
+      answers:
+        one: 1 answer
+        other: %{count} answers
+      followers:
+        one: 1 follower
+        other: %{count} followers
+    user:
+      answers:
+        one: 1 answer
+        other: %{count} answers
+      followers:
+        one: 1 follower
+        other: %{count} followers
+      questions:
+        one: 1 question
+        other: %{count} questions
+    topic:
+      followers:
+        one: 1 follower
+        other: %{count} followers
+      questions:
+        one: 1 question
+        other: %{count} questions

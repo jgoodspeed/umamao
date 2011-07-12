@@ -1,0 +1,12 @@
+en:
+   signup_wizard:
+     connect: "Connect accounts"
+     follow: "Follow people and topics"
+     skip: "Go straight to the site"
+     finish: "Finish"
+     introduction: |
+       When you follow people and topics of interest,
+       you are able to see accounts most relevant to you.
+       <strong> Connect your accounts to meet friends and receive suggestions </ strong>
+     wait: |
+       Please wait while we look for people and relevant topics.

@@ -1,0 +1,41 @@
+en:
+  user_suggestions:
+    delete:
+      notice:
+        "Suggestion deleted"
+    refuse:
+      notice:
+        "Suggestion refused"
+    notifications:
+      new_user_suggestion:
+        "%{user} suggested that you follow the topic %{topic}"
+      accepted_user_suggestion:
+        "%{user} accepted his suggestion and moved the topic %{topic}"
+    suggested:
+      user: Suggested topics
+      suggest: Suggest a topic
+      suggest_to: Invite someone to this topic
+    suggested_by:
+      one: "Suggested by %{user}"
+      other: "Suggested by %{user} to %{others}"
+    topic: Invite to topic
+    user: Suggest topics
+    user_suggest:
+      notice:
+        ok:
+          "Topic %{topic} suggested to the user %{user}"
+        already_follow:
+          "%{user} already follow a topic %{topic}"
+        suggestion_exists:
+          "Have you suggested the topic %{topic} to %{user}"
+        user_is_origin:
+          "You can not suggest a topic you"
+        invalid_topic:
+          "The suggested topic does not exist"
+      suggestion_box:
+        friend: "Suggested by you. awaiting confirmation."
+        self_html:
+          zero: "Suggested by %{origin}"
+          one: "Suggested by %{origin} and one other person"
+          other: "Suggested by %{origin} and %{count} more people"
+    user_follows_nothing: "%{user} follows no topic yet."

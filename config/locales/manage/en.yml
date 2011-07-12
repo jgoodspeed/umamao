@@ -2,36 +2,36 @@ en:
   admin:
     manage:
       content:
-        title: Custom content
-        question_prompt: Question prompt
-        question_help: Question help
+        title: Countent customize
+        question_prompt: Prompt Question
+        question_help: Prompt Details
         head: header
         footer: Footer
         top_bar: Top bar
-        top_bar_tip: Enter one link per line
+        top_bar_tip: Between one link per line
       properties:
         general:
-          title: Group properties
+          title: Site Properties
         share:
           title: Share
         constrains:
-          title: Requirements
-          reputation_constrains_subtitle: List of reputation requirements for each action
-          reputation_constrains_description: This form allows you to configure how many reputation points users need to do a given action
+          title: constraints
+          reputation_constrains_subtitle: List of requirements reputation
+          reputation_constrains_description: This form below allows you to configure how many reputation 
         rewards:
           title: Rewards
-          reputation_rewards_subtitle: List of reputations rewards
-          reputation_rewards_description: This form allows you to configure how users can win and lose reputation points for a given action
+          reputation_rewards_subtitle: List of reputation awards 
+          reputation_rewards_description: This form below allows you to configure reputation awards
         theme:
-          title: Set the group's theme
-          logo_legend: Upload a logo for your group. It must be smaller than 2MB.
+          title: Site Name
+          logo_legend: Logo of the site. Must be less than 2MB.
         domain:
-          title: Set your domain
-          description: "You can map your site so it can be accessed through your own custom domain. This is how you do it:"
-          instruction1: "To do so you first need to log on to your domain provider. That is the site where you bought your domain such as %{subdomain}.com."
-          instruction2: There you need to go to the DNS section and create something called a CNAME.
-          instruction3: "Pick 'www' or anything else as the name of your CNAME."
-          instruction4: "Then in the host or destination field, put your current Shapado domain: %{domain}."
-          instruction5: "Once this is done, after an hour or so, your domain www.%{subdomain} should point to %{appdomain}."
-          instruction6: "When this is the case, come back here and put your domain name www.%{subdomain} in the field below and press the button 'update'. If you have questions, ask us in the %{chat_url} or on our support forum."
-          warning: Are you sure you want to change your domain?
+          title: Domain
+          description: "You can configure domains for your site. It works like this:"
+          instruction1: "You need to log in to your manager of your domains first. This site where you bought the domains."
+          instruction2: "There you should go to configuration DNS create a CNAME record called."
+          instruction3: "Pick 'www' or whatever the name of the CNAME."
+          instruction4: "Then in the 'host' or 'target', put your domains on current : %{domain}."
+          instruction5: "Then, after about an hour, your domains www.%{subdomain} should point to %{appdomain}."
+          instruction6: "When that happens, come back and put the domains www.%{subdomain} in the field below and press the button on the 'Update'. If you have questions, please contact us at %{chat_url} or our this forum support .
+          warning: Sure you want to change the domain?

@@ -1,31 +1,45 @@
 en:
-  answers:
-    form:
-      comment_label: Comment on this answer
-      answer_label: Answer the question
-      comment_submit: Comment
-      submit: Answer
-      not_logged: "Please <a href=\"%{link}\">login</a> to answer question."
-    edit:
-      title: Editing answer
-    create:
-      flash_notice: "Thanks!"
-      flash_error:  "Something went wrong adding your answer.
-  \n  Remember that:
-  \n - Empty and repeated answers are not allowed
-  \n - You need to wait 20 seconds before posting another answer.
-  \n - You can only post one answer per question."
-    update:
-      flash_notice: "Answer was successfully updated."
-    revert:
-      title: "Revert answer"
-
-  activerecord:
-    models:
-      answers: Answers
-      answer: Answer
-    attributes:
-      answer:
-        link: Link
-        created_at: Answered
-        body: Body
+   answers:
+     form:
+       comment_label: Comment on this answer
+       answer_label: Answer the question
+       comment_submit: Comment
+       submit: Reply
+       not_logged: "<a href=\"%{link}\">Login</a> required to answer the question."
+       already_answered: "You already answered that question. If you want to contribute more, <a href=\"%{link}\">edit your answer</a>."
+     edit:
+       title: Editing response
+     create:
+       flash_notice: "Answer posted."
+       flash_error: "Something went wrong with your answer.
+    \n Remember that:
+    \n - empty answers or repeats are not permitted;
+    \n - You must wait 20 seconds to post another response;
+    \n - You only can post one answer per question. "
+     show:
+       share_success: "Question successfully shared in %{site}."
+     share_body:
+       facebook: Answer
+       facebook_named: Answer from %{name}
+       facebook_self: My answer
+       twitter: Answer in %{site}
+       twitter_named: Answer from %{name} in %{site}
+       twitter_self: Answered in %{site}
+     update:
+       flash_notice: "Response to date."
+     revert:
+       title: "Reversing response"
+     ban: Hide
+     sure_ban: Sure you want to hide this answer?
+   activerecord:
+     models:
+       answers: Answers
+       answer: Answer
+       answer_count:
+         one: answer
+         other: answers
+     attributes:
+       answer:
+         link: Link
+         created_at: Built
+         Body: Response

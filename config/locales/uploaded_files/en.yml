@@ -1,0 +1,5 @@
+en:
+  uploaded_files:
+    errors:
+      blank: File missing
+      size: File too large

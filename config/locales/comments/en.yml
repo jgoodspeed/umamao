@@ -1,16 +1,22 @@
 en:
-  comments:
-    edit:
-      title: Edit comment
-    create:
-      flash_notice: Thanks for your comment
-    update:
-      flash_notice: "Comment was successfully updated."
-    shared:
-      add_comment: "Add comment..."
-      comment_submit: "Comment"
-      said: said
-      reply: Reply
-  models:
-    comments: Comments
-    comment: Comment
+   comments:
+     edit:
+       title: Edit
+     create:
+       flash_notice: "Comment sent."
+     update:
+       flash_notice: "Comments updated."
+     shared:
+       add_comment: "Add comment"
+       comment_submit: "Comment"
+       said: said
+       reply: Reply
+     comment:
+       confirm_destroy: "Sure you want to delete this comment?"
+     count:
+       none: "No comments"
+       one: "One comment"
+       other: "%{count} comments"
+   models:
+     comments: Comments
+     comment: Comment

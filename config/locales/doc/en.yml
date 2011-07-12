@@ -1,5 +1,11 @@
 en:
   doc:
+    privacy:
+      title:
+        Privacy policy
+    tos:
+      title:
+        Terms of use
     chat:
       title: Chat Support
     plans:

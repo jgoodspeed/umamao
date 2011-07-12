@@ -1,0 +1,39 @@
+en:
+   settings:
+     password:
+       edit:
+         submit: Change Password
+         new_password_saved: 'Password saved.'
+         error_changing_password: 'Error saving password'
+     account:
+       edit:
+         title: Account
+     profile:
+       edit:
+         title: Profile Information
+         change_picture: Change picture
+     notifications:
+       edit:
+         title: Notifications
+         description: 'Check the events on which you want to be notified by email.'
+         new_answer: 'Answers questions and comments '
+         submit: Update
+     follow_topics:
+       edit:
+         title: Topics followed
+         followed: Topics followed
+         ignored: Topics ignored
+     avatars:
+       edit:
+         title: Change avatar
+         upload: Choose a photo (limit %{limit})
+         submit: Submit
+         destroy: Remove
+       create:
+         success: "Avatar updated successfully."
+         error: "Could not update your avatar."
+       update:
+         error: "Could not update your avatar."
+       destroy:
+         success: "Avatar removed successfully."
+         error: "There was an error while attempting to remove your avatar."

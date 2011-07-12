@@ -1,0 +1,18 @@
+en:
+  share_content:
+    embed:
+      title: Incorporate
+      explanation: |
+        Copy one of the excerpts below and insert the code of your page:
+      javascript: Incorporating a Javascript
+      iframe: Incorporate iframe
+      more: More information
+    post_on_facebook: Post on Facebook
+    post_on_twitter: Post on Twitter
+    share:
+      answer: Share answer
+      question: Share question
+      question_list: Share
+      topic: Share
+    group_invitation:
+      message: You are one step closer to discuss, learn and teach about many different subjects, just complete the information below.

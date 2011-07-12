@@ -1,0 +1,48 @@
+en:
+  question_lists:
+    new:
+      title: "Create list of questions"
+      main_topic: "Main topic"
+      submit: "Submit question"
+      description: "Description"
+      sample_title: "(ex.: %{title} - %{semester}s%{year} - List 1)"
+    create:
+      success: "List successfully created. Add questions."
+      error:
+        existing_list: "Error trying to create the list. List already exists."
+        default: "Error trying to create the list."
+      topic_does_not_allow: "Topic %{title} does not allow lists of exercises."
+    print_header: Print header
+    questions_print: Print questions
+    full_print: Full print
+    show:
+      all: All questions
+      empty:
+        basic: "This list does not have any questions."
+        transcribe: |
+          This list does not have any questions.
+          You can help by copying the above files.
+      confirm_destroy: |
+        Are you sure you want to delete this list of questions?
+      add_questions: "Add new question"
+      add_files: "Add files"
+      files:
+        title: "Files"
+        add:
+          title: "Add file"
+          submit: "Submit"
+      unanswered: Open questions
+    form:
+      new_question: "New question"
+      example: "(ex.: %{list_title} - Question 1)"
+      details: "Details"
+      make_question: "Add question"
+    question:
+      answers_count:
+        zero: "No answers"
+        one: "%{count} answer"
+        other: "%{count} answers"
+    create_file:
+      error: "Unable to send the file"
+    destroy_file:
+      error: "Unable to send the file"

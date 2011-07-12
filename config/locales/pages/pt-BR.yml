@@ -1,7 +1,3 @@
-# Messages for Brazilian Portuguese (Português do Brasil)
-# Exported from translatewiki.net
-# Export driver: syck
-# Author: Luckas Blade
 pt-BR:
   activerecord:
     attributes:

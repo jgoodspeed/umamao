@@ -1,0 +1,38 @@
+en:
+   followable:
+     follow: Follow
+     unfollow: Do not follow
+     following:
+       one: "Following a person"
+       other: "Following %{count} people"
+       link:
+         one: "Following  <a href=\"%{link}\">1 person</a>"
+         other: "Following <a href=\"%{link}\">%{count} people</a>"
+     followers:
+       one: "Followed by a person"
+       other: "Followed by %{count} people"
+       link:
+         one: "<a href=\"%{link}\" data-count=\"%{count}\">1 follower</a>"
+         other: "<a href=\"%{link}\" data-count=\"%{count}\">%{count} followers</a>"
+       question:
+         one: "Followed by a person"
+         other: "Followed by %{count} people"
+         link:
+           one: " <a href=\"%{link}\">1 person</a> following this question."
+           other: "<a href=\"%{link}\">%{count} people</a> following this question."
+       top_answerers: Entusiastas
+     flash:
+       follow: "Youre following %{followable}"
+       unfollow: "You stopped following %{followable}"
+     topics:
+       one: "Following a topic"
+       other: "Following %{count} topics"
+       none: "No topic followed"
+       link:
+         one: "Following <a href=\"%{link}\">1 topic</a>"
+         other: "Following <a href=\"%{link}\">%{count} topics</a>"
+     suggestions:
+       users: "Suggestions of Users"
+       topics: "Suggestions of Topics"
+     user_suggestions:
+       topics: Suggested topics for users

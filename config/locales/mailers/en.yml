@@ -1,18 +1,28 @@
 en:
-  mailers:
-    notifications:
-      new_answer:
-        subject_owner: "%{login} answered your question %{title}"
-        subject_friend: "Your friend %{login} answered the question %{title}"
-        subject_other: "%{login} answered the question %{title}"
-      new_comment:
-        subject: "%{login} commented on %{group}"
-      give_advice:
-        subject: "We need your advice: %{question_title}"
-        friend_subject: "Your friend needs help: %{question_title}"
-      follow:
-        subject: "%{login} is now following you on %{app}"
-      favorited:
-        subject: "%{login} added your question as a favorite!"
-      report:
-        subject: "Report for the group %{group} of %{app}"
+   mailers:
+     notifications:
+       new_question:
+         subject: "New question in topic %{topic}"
+       new_answer:
+         subject_owner: "%{name} replied to your question '%{title}'"
+         subject_friend: "%{name} replied to the question '%{title}'"
+         subject_other: "%{name} replied to the question '%{title}'"
+       new_comment:
+         subject: "%{name} commented on the %{group}"
+       new_user_suggestion:
+         "%{origin} suggested that you follow the topic %{entry}"
+       give_advice:
+         subject: "We need your help in answering : %{question_title}"
+         friend_subject: "We need your help in answering : %{question_title}"
+       follow:
+         subject: "%{name} is following you in %{app}"
+       favorited:
+         subject: "%{name} added your question as a favorite!"
+       report:
+         subject: "Report %{app}"
+       signup:
+         subject: "Confirm your account on StockCrunch"
+       closed_for_signup:
+         subject: "Your membership in StockCrunch"
+       user_accepted_suggestion:
+         "%{user} accepted his suggestion and moved the topic %{entry}"

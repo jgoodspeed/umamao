@@ -1,0 +1,64 @@
+en:
+   activerecord:
+     models:
+       topics: Topics
+       topic: Topic
+   topics:
+     index:
+       title: Topics
+       questions_count_tab: Number of Questions
+       title_tab: Name
+       created_at_tab: Recent
+     edit:
+       title: Edit topic
+       name: Name
+       description: Descriptions
+     common:
+       all_tab: All questions
+       unanswered_tab: Unanswered
+       new_question_list: Create list of questions
+     share_body:
+       topic: "Topic on %{site}: %{title}"
+       question_list: "List of questions on %{site}: %{title}"
+     show:
+       empty: Topic empty. Help populate it by <a href="/questions/new"> creating a new question </a>.
+       email_subscription:
+         notice:
+           subscribed: You will receive new questions by e-mail on the topic %{topic}.
+           unsubscribed: You will not receive new e-mail questions on the topic %{topic}.
+         disable: disable
+         enable: enable
+         text: Receive new questions by email
+       view: View topic
+       registered_students: Registered students
+       all_tab: All questions
+       unanswered_tab: Open Questions
+     question_lists:
+       title: Question list
+       main_topic: View topic
+     sidebar:
+       follow_on_twitter: "Follow this topic on Twitter:"
+       connect_to_twitter: Connect with Twitter
+       disconnect_from_twitter: Disconnect
+       related_topics: Related topics
+       registered_students: Registered students
+       question_lists: Question lists
+       main: Main
+       more: More...
+     tooltip:
+       describe: "Help describe the topic %{title}"
+     unanswered:
+       empty: Topic empty. Help populate it by <a href="/questions/new"> creating a new question </a>.
+       all_tab: All questions
+       unanswered_tab: Open Questions
+     group_invitation:
+       message: You are one step closer to discuss, learn and teach about <a href="%{link_topic}">%{topic}</a> and more, simply fill out the form below.
+     embedded:
+       empty: There are no questions on this topic
+     user_answers:
+       title: "Answers of %{user} on topic %{topic}"
+     user_questions:
+       title: "Questions of %{user} on topic %{topic}"
+   embedded:
+     question: Question
+     more: More questions

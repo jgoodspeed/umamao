@@ -1,0 +1,27 @@
+en:
+  inviter:
+    invitation:
+      subject: "%{inviter} invited you to enter the StockCrunch!"
+      greeting: Hello!
+      sender: "%{user} thinks you should join the StockCrunch:"
+      sender_topic: "%{user} invited you to discuss %{topic} in StockCrunch:"
+      site_description: |
+        StockCrunch is a daily question and answer forum for stocks and economy moderated and ranked by its participants.
+      text_link_label: "To accept the invitation, follow this link:"
+      html_link_label: "To accept the invitation, %{link}, or type this URL into your browser:"
+      click_here: click here
+      goodbye: |
+        We hope to see you soon!
+
+        Thank you,
+        StockCrunch Team
+    request_answer:
+      subject: "%{user} asked you to answer a question in StockCrunch"
+      greeting: Hello %{invited},
+      sender: "%{user} think you know the answer to question %{question}"
+      answer: Click here to reply
+      text_link_label: "To answer the question, click on this link:"
+      goodbye: |
+
+        Thank you,
+        StockCrunch Team

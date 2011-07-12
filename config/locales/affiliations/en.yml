@@ -1,0 +1,10 @@
+en:
+   affiliations:
+     create:
+       email_sent: "Thank you! Check your email for further instructions."
+     form:
+       email: E-mail"
+     errors:
+       invalid_email: The address of the email is invalid.
+       duplicate_email: This email already exists.
+       unknown: There was an error.
