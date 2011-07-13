@@ -17,6 +17,7 @@ dump
 *~
 vendor/cache
 vendor/bundle
+public
 public/stylesheets/compiled
 public/assets
 .rvmrc
