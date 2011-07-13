@@ -39,7 +39,7 @@ class User
 
   key :notification_opts,         NotificationConfig
 
-  key :language,                  String, :default => 'pt-BR'
+  key :language,                  String, :default => 'en'
   key :timezone,                  String, :default => "Brasilia"
   key :language_filter,           String, :default => "user", :in => LANGUAGE_FILTERS
 
@@ -880,7 +880,7 @@ Time.zone.now ? 1 : 0)
     {
       :id => self.id,
       :title => self.name,
-      :photo_url => Helper.instance.avatar_for(self, :size => 20),
+#      :photo_url => Helper.instance.avatar_for(self, :size => 20),
       :entry_type => "User"
     }
   end

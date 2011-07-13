@@ -50,7 +50,7 @@ class Question
   belongs_to :answered_with, :class_name => "Answer"
 
   key :wiki, Boolean, :default => false
-  key :language, String, :default => 'pt-BR'
+  key :language, String, :default => 'en'
 
   key :activity_at, Time
 

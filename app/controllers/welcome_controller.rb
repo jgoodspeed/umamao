@@ -11,7 +11,8 @@ class WelcomeController < ApplicationController
       calculate_counts
       home
     else
-      landing
+#      landing
+      home
     end
   end
 

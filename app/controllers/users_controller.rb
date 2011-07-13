@@ -104,7 +104,7 @@ class UsersController < ApplicationController
 
     end
 
-    if @invitation || @affiliation || @group_invitation
+    if @invitation || @affiliation || @group_invitation || true
       @user.timezone = AppConfig.default_timezone
       render 'new', :layout => 'welcome'
     else

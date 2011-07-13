@@ -1,7 +1,7 @@
 module SearchesHelper
   def autocomplete_url
     "http://#{AppConfig.search["host"]}:#{AppConfig.search["port"]}" +
-      "/solr/select?wt=json"
+      "/solr/select?wt=json" if AppConfig.search
   end
 
   def excerpt_with_regexp(text, regexp, *args)

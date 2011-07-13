@@ -87,7 +87,7 @@ class Invitation
   private
   def recipient_is_not_user
     if User.find_by_email(self.recipient_email)
-      self.errors.add(:email, "já está cadastrado no Umamão!")
+      self.errors.add(:email, "already registered in StockCrunch!")
     end
   end
 
