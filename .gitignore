@@ -10,12 +10,13 @@ base_packaged.*
 landing_packaged.*
 .directory
 .bundle
-log/
+log/*
 tmp/**/*
 dump
 *.swp
 *~
 vendor/cache
+vendor/bundle
 public/stylesheets/compiled
 public/assets
 .rvmrc

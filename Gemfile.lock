@@ -105,6 +105,7 @@ GEM
       open4
     Platform (0.4.0)
     RedCloth (4.1.9)
+    SystemTimer (1.2.3)
     ZenTest (4.5.0)
     abstract (1.0.0)
     addressable (2.2.4)
@@ -379,6 +380,7 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth (~> 4.1.1)
+  SystemTimer
   autotest-rails
   bitly
   bson_ext

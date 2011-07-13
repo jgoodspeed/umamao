@@ -58,6 +58,7 @@ gem 'warden', '~>0.10.7'
 gem 'bitly'
 gem 'jammit', '~>0.6.0'
 gem 'goalie'
+gem 'SystemTimer'
 
 group :test do
   gem "rspec"
