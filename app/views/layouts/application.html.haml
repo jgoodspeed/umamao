@@ -21,11 +21,12 @@
       = current_group.head
       #top-bar
         #top-bar-links
-          - AppConfig.top_bar.each do |group_of_links|
-            %ul
-              - group_of_links.each do |link|
-                %li
-                  = link_to link[0], link[1]
+          - if AppConfig.top_bar
+            - AppConfig.top_bar.each do |group_of_links|
+              %ul
+                - group_of_links.each do |link|
+                  %li
+                    = link_to link[0], link[1]
       #main-bar{:class => @active_tab}
         #logo
           = link_to image_tag("shorter_logo.png", :class => "group_logo", :height => 42, :alt => AppConfig.application_name), domain_url(:custom => current_group.domain)
@@ -102,16 +103,16 @@
     :javascript
       var uservoiceOptions = {
         /* required */
-        key: 'umamao',
-        host: 'feedback.umamao.com',
-        forum: '94693',
+        key: 'kejami',
+        host: 'kejami.uservoice.com',
+        forum: '121913',
         showTab: true,
         /* optional */
         alignment: 'left',
         background_color:'#f00',
         text_color: 'white',
         hover_color: '#06C',
-        lang: 'pt_BR'
+        lang: 'en'
       };
 
       function _loadUserVoice() {

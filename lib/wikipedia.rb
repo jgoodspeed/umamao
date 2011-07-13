@@ -145,7 +145,7 @@ class WikipediaArticle
   protected
   def curl(url)
     Curl::Easy.http_get(url){ |easy|
-      easy.useragent = "UmamãoBot/0.1 (+http://umamao.com/)"
+      easy.useragent = "StockCrunchBot/0.1 (+http://stockcrunch.com/)"
     }.body_str
   end
 end
