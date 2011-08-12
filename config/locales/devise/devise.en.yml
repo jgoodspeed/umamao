@@ -53,7 +53,7 @@ en:
       confirmation_instructions:
         subject: 'Please confirm your email'
         greeting: 'Hello, %{name}'
-        message: "Thank you for joining!  To complete your registration, we need to verify your email address. To do this click here %{link}."
+        message: "Thank you for joining!  To complete your registration, we need to verify your email address."
         email_link: "Confirm your email."
         goodbye: 'If you did not register on the site, please disregard this email.'
       reset_password_instructions:

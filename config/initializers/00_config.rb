@@ -26,7 +26,7 @@ end
 
 REPUTATION_CONSTRAINS = {"vote_up" => 0, "flag" => 0, "post_images" => 0,
 "comment" => 0, "delete_own_comments" => 0, "vote_down" => 0,
-"create_new_tags" => 0, "post_whithout_limits" => 0, "edit_wiki_post" => 0,
+"create_new_tags" => 0, "post_whithout_limits" => 0, "edit_wiki_post" => 100,
 "remove_advertising" => 200, "vote_to_open_own_question" => 0, "vote_to_close_own_question" => 0,
 "retag_others_questions" => 500, "delete_comments_on_own_questions" => 750,
 "edit_others_posts" => 2000, "view_offensive_counts" => 2000, "vote_to_close_any_question" => 3000,

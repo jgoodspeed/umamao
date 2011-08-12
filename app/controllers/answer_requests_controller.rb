@@ -33,7 +33,7 @@ class AnswerRequestsController < ApplicationController
       format.js do
         render :json => {
           :success => true,
-          :message => "Usuário convidado",
+          :message => "Guest user",
           :html => render_to_string(:partial => "questions/requested_users",
                                     :locals => {:question => 
                                       @answer_request.question})
