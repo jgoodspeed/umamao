@@ -54,6 +54,12 @@
       .input
         = f.text_field :name
 
+    .field
+      .label
+        = f.label :account_type, t(:account_type, :scope => "users.form")
+      .input
+        = f.select :account_type, options_for_select([ "Personal Account","Financial Advisor Account" ], "Financial Advisor Account"), {:selected => "Financial Advisor Account"}, :class => "select"
+
     .field.agree
       = f.check_box :agrees_with_terms_of_service
       = t("users.new.agree", :privacy => privacy_path, :tos => tos_path)

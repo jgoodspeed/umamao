@@ -85,6 +85,7 @@ en:
       avatar_tip: "Change your profile picture"
       show_more_lang: "Show more languages"
       university: "University"
+      account_type: "I want this account to be:"
     annoying:
       unconfirmed_non_academic_email: "You have not yet confirmed your e-mail address!"
       resend_confirmation_email: "Resend confirmation e-mail."
@@ -105,6 +106,11 @@ en:
       retag_others_questions: "retag other questions"
       vote_to_close_own_question: "vote to close my question"
       vote_to_close_any_question: "vote to close questions"
+    account_type:
+      company: Company Account
+      corporate: Corporate Account
+      financial_advisor: Financial Advisor Account
+      personal: Personal Account
   activerecord:
     models:
       users: Users
@@ -138,6 +144,11 @@ en:
         bio: Short Biography
         description: Long Biography
         location: Location
+        account_type:
+          company: Company Account
+          corporate: Corporate Account
+          advisor: Financial Advisor Account
+          personal: Personal Account
         gender:
           title: Gender
           male: Male

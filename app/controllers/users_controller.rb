@@ -115,7 +115,7 @@ class UsersController < ApplicationController
   def create
     tracking_properties = {}
     @user = User.new
-    @user.safe_update(%w[login email name password_confirmation password
+    @user.safe_update(%w[login email name password_confirmation password account_type
                          preferred_languages website language timezone
                          identity_url bio invitation_token
                          affiliation_token], params[:user])
