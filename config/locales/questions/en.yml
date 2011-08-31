@@ -171,10 +171,10 @@ en:
       tags: Topics without answers
       title: Open Questions
     tip:
-      explanation: Open-ended questions are questions that have no answer to a positive number of votes.
-      call_to_action: "You can help:"
-      answer: answer
-      vote: voting in existing responses.
+      explanation: ""
+      call_to_action: ""
+      answer: ""
+      vote: ""
     unsolve:
       flash_notice: Reply marked does not support them.
     unwatch:
