@@ -411,11 +411,11 @@ function solrConversion(data) {
   switch (data.entry_type) {
   case "User":
     data.url = "/users/" + data.id;
-    data.html = makeLi(data.photo_url + " " +
-                       data.title + makeDesc("Usuário"));
+    data.html = makeLi(data.title +
+                       makeDesc("User"));
     break;
   case "Topic":
-    var question = data.question_count == 1 ? " pergunta" : " perguntas";
+    var question = data.question_count == 1 ? " question" : " questions";
     data.url = "/topics/" + data.id;
     data.html = makeLi(data.title +
                        makeDesc(data.question_count + question));
