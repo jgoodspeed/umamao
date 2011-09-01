@@ -28,12 +28,9 @@
                   %li
                     = link_to link[0], link[1]
       #main-bar{:class => @active_tab}
-        #logo
-          = link_to image_tag("shorter_logo.png", :class => "group_logo", :height => 42, :alt => AppConfig.application_name), domain_url(:custom => current_group.domain)
+        #logo{:style => "width: 311px;"}
+          = link_to image_tag("shorter_logo.png", :class => "group_logo", :height => 45, :alt => AppConfig.application_name), domain_url(:custom => current_group.domain)
         = render :partial => "shared/search"
-        .vertical-bar
-        #home-link
-          = link_to t('.home'), root_path
 
         #main-right
           = render :partial => "shared/other_actions"

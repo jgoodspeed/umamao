@@ -35,7 +35,7 @@ function initUserAutocomplete() {
         filteredDocs.push(docs[i]);
     }
     if(filteredDocs.length == 0){
-      filteredDocs.push({title: "Usuário não encontrado",
+      filteredDocs.push({title: "User not found",
           entry_type : "NotFound"});
     }
     return filteredDocs;

@@ -123,6 +123,8 @@
   margin-bottom: 15px
 
 #main-right
+  +column(8, true)
+  width: 0px
   float: right
   #ask-question, .vertical-bar, #other-actions
     float: right
