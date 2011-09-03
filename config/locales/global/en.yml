@@ -15,7 +15,7 @@ en:
      send: Send
      save: Save
      details: Details
-     done: Ready
+     done: Done
    time:
      today: today
      ago: "%{time} ago"
