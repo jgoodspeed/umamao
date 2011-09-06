@@ -54,11 +54,13 @@
       .input
         = f.text_field :name
 
+    %br
     .field
       .label
         = f.label :account_type, t(:account_type, :scope => "users.form")
       .input
-        = f.select :account_type, options_for_select([ "Personal Account","Financial Advisor Account" ], "Financial Advisor Account"), {:selected => "Financial Advisor Account"}, :class => "select"
+        = f.select :account_type, options_for_select([ "Personal Account","Financial Advisor Account" ], "Personal Account"), {:selected => "Personal Account"}, :class => "select"
+    %br
 
     .field.agree
       = f.check_box :agrees_with_terms_of_service
@@ -66,4 +68,7 @@
 
     .submit
       = submit_tag t('.submit')
+      %br
       = t(".already_registered")
+      %br
+      %br

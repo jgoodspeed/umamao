@@ -38,7 +38,7 @@ en:
       agree: |
         I have read and agree with the policy <a href="%{privacy}" target="_blank">Privacy</a>
         and the <a href="%{tos}" target="_blank">terms of use</a> site.
-      already_registered: Already have an account at StockCrunch? <a href="/users/login">Login</a> to enter.
+      already_registered: Already have an account at StockCrunch? <br /><a href="/users/login">Login</a> to enter.
     news_update:
       question:
         user:
