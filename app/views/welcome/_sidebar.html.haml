@@ -1,5 +1,9 @@
 - content_for :sidebar do
   .block
+    .help
+      %h4
+        =t("welcome.intro.title")
+      =t("welcome.intro.help")
     - if current_user && current_user.owner_of?(current_group)
       .navigation= link_to t(".admin"), manage_properties_path
     - if current_user && current_user.mod_of?(current_group)

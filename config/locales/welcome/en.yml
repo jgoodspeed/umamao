@@ -1,5 +1,8 @@
 en:
    welcome:
+     intro:
+       title: What is it?
+       help: This is SPARTA!
      feedback:
        captcha_error: resolve the mistake please.
        feedback_description: "Details"
