@@ -6,7 +6,8 @@
       .navigation= link_to t(".moderate"), moderate_path
     - if current_user && Affiliation.count(:user_id => current_user.id) > 0
       .navigation= t('welcome.home.looking_for', :link => link_to(t('welcome.home.exercises'), topic_path('Resolução-de-exercício')))
-    .navigation= link_to t("devise.registrations.link"), new_user_path
+    - if !current_user
+      #register-new-user= link_to t("devise.registrations.link"), new_user_path
 
   -# Topic suggestions
   - if logged_in?
