@@ -1,7 +1,7 @@
 en:
   inviter:
     invitation:
-      subject: "%{inviter} invited you to enter the StockCrunch!"
+      subject: "%{inviter} invited you to join StockCrunch!"
       greeting: Hello!
       sender: "%{user} thinks you should join the StockCrunch:"
       sender_topic: "%{user} invited you to discuss %{topic} in StockCrunch:"
@@ -18,7 +18,7 @@ en:
     request_answer:
       subject: "%{user} asked you to answer a question in StockCrunch"
       greeting: Hello %{invited},
-      sender: "%{user} think you know the answer to question %{question}"
+      sender: "%{user} thinks you know the answer to question %{question}"
       answer: Click here to reply
       text_link_label: "To answer the question, click on this link:"
       goodbye: |
