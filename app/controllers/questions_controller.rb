@@ -8,7 +8,7 @@ class QuestionsController < ApplicationController
   before_filter :check_favorite_permissions, :only => [:favorite, :unfavorite] #TODO remove this
   before_filter :set_active_tag
   before_filter :check_age, :only => [:show]
-  before_filter :check_retag_permissions, :only => [:retag, :retag_to]
+  before_filter :check_retag_permissions, :only => [:retag, :retag_to, :classify, :unclassify]
 
   tabs :default => :questions, :tags => :tags,
        :unanswered => :unanswered, :new => :ask_question

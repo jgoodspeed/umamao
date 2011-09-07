@@ -79,7 +79,9 @@ function initTopicAutocompleteForReclassifying() {
   $("a.remove", topicsUl).live("click", function () {
     var link = $(this);
     $.getJSON(link.attr("href"), function (data) {
-      link.closest("li").remove();
+      if (data.success) {
+        link.closest("li").remove();
+      }
     });
     return false;
   });
