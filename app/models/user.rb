@@ -31,7 +31,7 @@ class User
   key :description,               String
   key :new_user,                  Boolean, :default => true
 
-  key :account_type,              String, :default => "Personal Account"
+  key :account_type,              String, :default => "Investor"
 
   key :identity_url,              String
   key :role,                      String, :default => "user"

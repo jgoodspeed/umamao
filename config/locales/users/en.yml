@@ -36,7 +36,7 @@ en:
           title: "You came at the invitation of %{user}"
       affiliation_message: "Your email  address %{email} has been confirmed!  Now just finish your registration by filling out the form below."
       agree: |
-        I have read and agree with the policy <a href="%{privacy}" target="_blank">Privacy</a>
+        I have read and agree with the <a href="%{privacy}" target="_blank">privacy</a> policy
         and the <a href="%{tos}" target="_blank">terms of use</a> site.
       already_registered: Already have an account at StockCrunch? <br /><a href="/users/login">Login</a> to enter.
     news_update:
@@ -85,7 +85,7 @@ en:
       avatar_tip: "Change your profile picture"
       show_more_lang: "Show more languages"
       university: "University"
-      account_type: "I want this account to be:"
+      account_type: "I am a:"
     annoying:
       unconfirmed_non_academic_email: "You have not yet confirmed your e-mail address!"
       resend_confirmation_email: "Resend confirmation e-mail."
@@ -107,10 +107,10 @@ en:
       vote_to_close_own_question: "vote to close my question"
       vote_to_close_any_question: "vote to close questions"
     account_type:
-      company: Company Account
-      corporate: Corporate Account
-      financial_advisor: Financial Advisor Account
-      personal: Personal Account
+      company: Company
+      corporate: Corporate
+      financial_advisor: Financial Advisor
+      personal: Investor
   activerecord:
     models:
       users: Users
@@ -145,10 +145,10 @@ en:
         description: Long Biography
         location: Location
         account_type:
-          company: Company Account
-          corporate: Corporate Account
-          advisor: Financial Advisor Account
-          personal: Personal Account
+          company: Company
+          corporate: Corporate
+          advisor: Financial Advisor
+          personal: Investor
         gender:
           title: Gender
           male: Male

@@ -2,7 +2,7 @@ en:
    welcome:
      intro:
        title: What is StockCrunch?
-       help: "It is a Question & Answer forum for the stock market and economy.  Constantly expanded and improved upon by its members StockCrunch seeks to fix the broken 'stock bulletin board' and become a quality resource for investors."
+       help: "StockCrunch is a Question & Answer forum for the stock market and economy.  Constantly expanded and improved upon by its members StockCrunch seeks to fix the broken 'stock bulletin board' and become a quality resource for investors."
      feedback:
        captcha_error: resolve the mistake please.
        feedback_description: "Details"
