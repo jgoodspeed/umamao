@@ -1,7 +1,7 @@
 en:
   layouts:
      application:
-       title: "Responses"
+       title: "Stock Talk"
        questions: Questions
        questions_in: Questions in
        questions_tagged: topic (s)
