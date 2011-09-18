@@ -145,7 +145,8 @@ en:
       solution: Answer accepted
       tag: Adding threads
       to_answer_question: To answer this question
-      unauthenticated_retag: You need an account to edit threads
+      unauthenticated_retag: You need an account to edit topics
+      unauthenticated_edit: You need an account to edit questions
       unfavorite_tooltip: Remove the question of his favorite
       unknown_destination: Destination sharing Invalid.
       unwatch_tooltip: Stop following this question

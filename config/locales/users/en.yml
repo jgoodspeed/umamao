@@ -101,7 +101,7 @@ en:
       vote_up: give positive vote
       vote_down: give negative vote
       flag: report
-      edit_others_posts: "edit other entries"
+      edit_others_posts: "edit others posts"
       edit_wiki_post: "edit wiki posts"
       retag_others_questions: "retag other questions"
       vote_to_close_own_question: "vote to close my question"

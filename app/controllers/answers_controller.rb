@@ -222,5 +222,32 @@ class AnswersController < ApplicationController
     raise Goalie::NotFound unless @answer
 
     allow_update = true
+
+    unless logged_in? && ( current_user.can_modify?(@answer) || current_user.can_edit_others_posts_on?(@answer.group) )
+      allow_update = false
+      reputation = @answer.group.reputation_constrains["edit_others_posts"]
+
+      if !logged_in?
+        error = t("questions.show.unauthenticated_edit")
+      else
+        error = I18n.t("users.messages.errors.reputation_needed",
+                       :min_reputation => reputation,
+                       :action => I18n.t("users.actions.edit_others_posts"))
+      end
+
+      respond_to do |format|
+        format.html do
+          flash[:error] = error
+          redirect_to @answer.question
+        end
+        format.js do
+          render(:json => {
+                   :success => false,
+                   :message => error
+                 }.to_json)
+        end
+      end
+
+    end
   end
 end

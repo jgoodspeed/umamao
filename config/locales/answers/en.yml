@@ -40,6 +40,6 @@ en:
          other: answers
      attributes:
        answer:
-         link: Link
+         share: Share
          created_at: Built
-         Body: Response
+         body: Response

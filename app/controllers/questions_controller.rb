@@ -599,6 +599,34 @@ class QuestionsController < ApplicationController
   def check_update_permissions
     @question = current_group.questions.find_by_slug_or_id(params[:id])
     allow_update = true
+    return allow_update if @question.nil?
+
+    unless logged_in? && ( current_user.can_modify?(@question) || current_user.can_edit_others_posts_on?(@question.group) )
+      allow_update = false
+      reputation = @question.group.reputation_constrains["edit_others_posts"]
+
+      if !logged_in?
+        error = t("questions.show.unauthenticated_edit")
+      else
+        error = I18n.t("users.messages.errors.reputation_needed",
+                       :min_reputation => reputation,
+                       :action => I18n.t("users.actions.edit_others_posts"))
+      end
+
+      respond_to do |format|
+        format.html do
+          flash[:error] = error
+          redirect_to @question
+        end
+        format.js do
+          render(:json => {
+                   :success => false,
+                   :message => error
+                 }.to_json)
+        end
+      end
+
+    end
   end
 
   def check_favorite_permissions
