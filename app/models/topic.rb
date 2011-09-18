@@ -215,15 +215,14 @@ class Topic
     if user_topic_info = UserTopicInfo.first(:topic_id => self.id,
                                         :user_id => user.id,
                                         :followed_at.ne => nil)
-      user_topic_info.unfollow!
       user_topic_info.followed_at = nil
       if self.email_subscribers.include?(user)
         self.email_subscriber_ids.delete(user.id)
       end
       self.increment(:followers_count => -1)
-      self.save!
-
-      user.ignore_topic!(self)
+      if self.save!
+        user_topic_info.save
+      end
     end
   end
 
