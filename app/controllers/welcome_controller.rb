@@ -32,9 +32,9 @@ class WelcomeController < ApplicationController
   end
 
   def home
-    @news_items = filter_news_items
+    @news_items = []
 
-    @questions = Question.latest.limit(10) || [] if @news_items.empty?
+    @questions = Question.latest.limit(10)
     @getting_started = Question.find_by_slug_or_id("4d404ee779de4f25ff000507")
 
     set_tab :all, :welcome_home
