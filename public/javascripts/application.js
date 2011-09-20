@@ -81,7 +81,7 @@ $(document).ready(function() {
       $(this).addClass('large');
     }
   }).filter('.large').append(
-    '<div class="more"><span class="more-link">(mais)</span></div>'
+    '<div class="more"><span class="more-link">(more)</span></div>'
   ).find('.more-link').click(function(){
     $(this).parents('.answer').addClass('expanded');
   });
