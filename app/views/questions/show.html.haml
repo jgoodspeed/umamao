@@ -29,12 +29,11 @@
     &= @question.title
     - if @question.closed
       = " [#{t("closed", :scope => "activerecord.attributes.question").upcase}]"
-
-  .body-col
-    .author
-      = link_to avatar_for(@question.user, :size => 32).html_safe, user_path(@question.user)
-      %p
-        = link_to h(@question.user.name), user_path(@question.user)
+    .body-col
+      .author
+        = link_to avatar_for(@question.user, :size => 32).html_safe, user_path(@question.user)
+        %p
+          = link_to h(@question.user.name), user_path(@question.user)
 
   .clear
 
