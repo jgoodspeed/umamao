@@ -28,6 +28,9 @@
       -# Question Stats
       .info
         .metadata
+          = t("activerecord.attributes.question.asked_by")
+          = link_to h(question.user.name), user_path(question.user)
+          \|
           = t("time.ago", :time => time_ago_in_words(last_target.updated_at))
           \|
           = format_number(question.answers_count)

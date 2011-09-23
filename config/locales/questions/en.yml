@@ -5,7 +5,7 @@ en:
         answers:
           one: Answer
           other: Answers
-        asked_by: Made in America
+        asked_by: Asked by
         body: Details
         closed: Closed
         created_at: Made
@@ -13,8 +13,8 @@ en:
         tags: Topics
         title: Question
         topic_ids: Topics
-        updated_at: updated
-        updated_by: updated
+        updated_at: updated at
+        updated_by: updated by
         views: Views
         votes: Votes
     models:
