@@ -59,7 +59,7 @@
       .label
         = f.label :account_type, t(:account_type, :scope => "users.form")
       .input
-        = f.select :account_type, options_for_select([ "Investor","Financial Advisor" ], "Investor"), {:selected => "Investor"}, :class => "select"
+        = f.select :account_type, options_for_select([ t("users.account_type.personal"), t("users.account_type.financial_advisor") ], t("users.account_type.personal")), {:selected => t("users.account_type.personal")}, :class => "select"
     %br
 
     .field.agree
