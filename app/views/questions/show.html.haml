@@ -36,6 +36,8 @@
       %p
         = link_to h(@question.user.name), user_path(@question.user)
 
+  .clear
+
   .body-col
     .body.markdown
       - if @question.closed && @question.close_reason
