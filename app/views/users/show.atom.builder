@@ -12,15 +12,15 @@ atom_feed do |feed|
     next if item.nil? || item.updated_at.blank?
 
     url = nil
-    case item.entry_type
+    case item.class.name
     when "Question"
       kind = t("users.show.atom.question")
-      question = item.entry
+      question = item
       url = question_url(question)
       body = question.body
     when "Answer"
       kind = t("users.show.atom.answer")
-      answer = item.entry
+      answer = item
       question = answer.question
       url = question_answer_url(question, answer)
       body = answer.body
@@ -30,8 +30,8 @@ atom_feed do |feed|
     feed.entry(item, :url => url) do |entry|
       entry.title("#{kind} #{question.title}")
       entry.content(markdown(body), :type => 'html')
-      entry.author do |author|
-        author.name(item.author.name)
+      entry.user do |author|
+        author.name(item.user.name)
       end
     end
   end
