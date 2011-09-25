@@ -461,7 +461,7 @@ class QuestionsController < ApplicationController
 
     # Create new topic when it doesn't exist yet.
     if @topic.nil?
-      @topic = Topic.create(:title => params[:topic])
+      @topic = Topic.create(:title => params[:topic], :user => current_user)
       @topic.save
     end
 

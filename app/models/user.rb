@@ -364,8 +364,7 @@ class User
   def age
     return if self.birthday.blank?
 
-    Time.zone.now.year - self.birthday.year - (self.birthday.to_time.change(:year => Time.zone.now.year) >
-Time.zone.now ? 1 : 0)
+    Time.zone.now.year - self.birthday.year - (self.birthday.to_time.change(:year => Time.zone.now.year) > Time.zone.now ? 1 : 0)
   end
 
   def can_modify?(model)

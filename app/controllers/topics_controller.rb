@@ -3,6 +3,7 @@ class TopicsController < ApplicationController
     :edit, :update, :follow, :unfollow, :ignore, :unignore,
     :toggle_email_subscription
   ]
+  before_filter :check_update_permissions, :only => [:edit, :update]
   respond_to :html
 
   tabs :default => :topics
@@ -511,6 +512,37 @@ class TopicsController < ApplicationController
     @questions = Question.query(
       :user_id => params[:user_id], :topic_ids => @topic.id
     ).paginate(:per_page => 10, :page => params[:page] || 1)
+  end
+
+  protected
+
+  def check_update_permissions
+    @topic = Topic.find_by_slug_or_id(params[:id])
+    allow_update = true
+
+    if !logged_in? || !current_user.can_modify?(@topic)
+      allow_update = false
+
+      if !logged_in?
+        error = t("questions.show.unauthenticated_edit")
+      else
+        error = I18n.t("users.messages.errors.cannot_modify_tag")
+      end
+
+      respond_to do |format|
+        format.html do
+          flash[:error] = error
+          redirect_to @topic
+        end
+        format.js do
+          render(:json => {
+                   :success => false,
+                   :message => error
+                 }.to_json)
+        end
+      end
+
+    end
   end
 
 end

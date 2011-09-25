@@ -97,15 +97,17 @@ en:
     messages:
       errors:
         reputation_needed: "You need at least %{min_reputation} reputation to %{action}"
+        cannot_modify_tag: "You cannot modify this tag."
     actions:
       vote_up: give positive vote
       vote_down: give negative vote
       flag: report
       edit_others_posts: "edit others posts"
       edit_wiki_post: "edit wiki posts"
-      retag_others_questions: "retag other questions"
+      retag_others_questions: "retag others questions"
       vote_to_close_own_question: "vote to close my question"
       vote_to_close_any_question: "vote to close questions"
+      retag_others_tags: "retag others tags"
     account_type:
       company: Company
       corporate: Corporate

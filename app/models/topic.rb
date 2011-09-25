@@ -17,6 +17,9 @@ class Topic
   key :updated_by_id, String
   belongs_to :updated_by, :class_name => "User"
 
+  key :user_id, String, :index => true
+  belongs_to :user
+
   key :followers_count, :default => 0, :index => true
 
   slug_key :title, :unique => true, :min_length => 3
@@ -66,6 +69,8 @@ class Topic
   after_destroy :remove_from_questions
   after_destroy :remove_from_question_versions
   after_destroy :remove_from_suggestions
+
+  validates_presence_of :user_id
 
   class Helper
     include Singleton
@@ -455,4 +460,5 @@ class Topic
     UserTopicInfo.first(:user_id => user.id, :topic_id => self.id,
                         :followed_at.ne => nil).present?
   end
+
 end
