@@ -1,0 +1,36 @@
+#main
+  %h2= t(".title")
+  %br
+
+  - if @errors.present?
+    #errorExplanation.errorExplanation
+      %ul
+        - @errors.each do |error|
+          %li= error
+
+  = form_tag :controller => "invitations", :action => "create_inquiry" do
+
+    = hidden_field_tag :account_type, t("users.account_type.financial_advisor")
+
+    .field
+      .label
+        = label_tag :email, t(:email, :scope => "users.form")
+      .input
+        = text_field_tag :email
+
+    .field
+      .label
+        = label_tag :message, t('.message')
+      .input
+        = text_area_tag :message
+
+    .field.agree
+      = check_box_tag :agrees_with_terms_of_service
+      = t("users.new.agree", :privacy => privacy_path, :tos => tos_path)
+
+    .submit
+      = submit_tag t('.submit')
+      %br
+      = t(".already_registered")
+      %br
+      %br
