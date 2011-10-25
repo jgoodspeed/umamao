@@ -174,4 +174,13 @@ class Notifier < ActionMailer::Base
     @email = waiting_user.email
     mail(:to => waiting_user.email, :subject => t("mailers.notifications.closed_for_signup.subject"))
   end
+
+  def invitation_inquiry(email, message)
+    @email = email
+    @message = message
+
+    subject = t("mailers.notifications.invitation_inquiry.subject", :email => email)
+
+    mail(:to => AppConfig.notification_email, :subject => subject)
+  end
 end

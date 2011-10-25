@@ -12,6 +12,9 @@
       .navigation= t('welcome.home.looking_for', :link => link_to(t('welcome.home.exercises'), topic_path('Resolução-de-exercício')))
     - if !current_user
       #register-new-user= link_to t("devise.registrations.link"), new_user_path
+      .clear
+      #register-or= t("devise.registrations.inquiry.or")
+      #register-inquiry= link_to t("devise.registrations.inquiry.text"), "/invitations/inquiry"
 
   -# Topic suggestions
   - if logged_in?

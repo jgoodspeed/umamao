@@ -1,11 +1,17 @@
 en:
    invitations:
+     inquiry:
+       submit: Submit
+       title: Invite inquiry form
+       already_registered: Already have an account at StockCrunch? <br /><a href="/users/login">Login</a> to enter.
+       message: Please, describe yourself
+       welcome: Your invitation inquiry is accepted. You will receive your invitation email soon.
      accepted:
        title: Invite accepted
      form:
        title: Invite by email
        labels:
-         recipient_email: "Email the person:"
+         recipient_email: "Email:"
          message: "Personal message (optional): "
      left:
        one: 1 invite left
@@ -23,8 +29,8 @@ en:
          notice:
            You will be redirected to an external page
            to authorize access to your contacts.
-       email: Enter your email address
-       name_or_email: Enter your name or email address
+       email: Enter email address
+       name_or_email: Enter name or email address
        invalid_emails:
          "The following addresses are invalid and could not be invited:"
        invite: Invite

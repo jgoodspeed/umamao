@@ -66,3 +66,11 @@ en:
       message: "We are still not open for public.  Your email has been saved and you'll be notified when we open."
       message2: ""
       goodbye: "If not registered on the site, please disregard this email."
+    invitation_inquiry:
+      greeting: "Hello,"
+      message1: "We have new advisor invitation inquiry:"
+      message2: "Email:"
+      message3: "Message:"
+      goodbye: |
+        Thank you,
+        StockCrunch Team

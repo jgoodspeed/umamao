@@ -1,6 +1,7 @@
 class AnswersController < ApplicationController
   before_filter :login_required, :except => [:show]
   before_filter :check_permissions, :only => [:destroy]
+  before_filter :check_create_permissions, :only => [:create]
   before_filter :check_update_permissions, :only => [:edit, :update, :revert]
 
   helper :votes
@@ -204,6 +205,14 @@ class AnswersController < ApplicationController
   end
 
   protected
+
+  def check_create_permissions
+    unless (current_user.present? ? current_user.is_advisor? : false)
+      flash[:error] = t("global.permission_denied")
+      redirect_to questions_path
+    end
+  end
+  
   def check_permissions
     @answer = Answer.find(params[:id])
     if !@answer.nil?

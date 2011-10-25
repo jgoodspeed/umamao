@@ -1,5 +1,6 @@
 class InvitationsController < ApplicationController
-  before_filter :login_required
+  before_filter :login_required, :only => [ :pending, :accepted, :resend, :new, :create,
+                                            :new_invitation_student, :create_invitation_student ]
 
   def pending
     @pending_invitations = Invitation.query(:sender_id => current_user.id,
@@ -13,6 +14,37 @@ class InvitationsController < ApplicationController
                                              :order => :created_at.desc)
   end
 
+  def inquiry
+    render :action => 'inquiry', :layout => 'welcome'
+  end
+  
+  def create_inquiry
+    @email = params[:email]
+    @message = params[:message]
+
+    @errors = []
+
+    if params[:agrees_with_terms_of_service] != "1"
+      @errors.push ( t("users.validation.errors.did_not_agree") )
+    end
+    if @email.empty?
+      @errors.push ( t("users.validation.errors.empty_email") )
+    end
+    if @message.empty?
+      @errors.push ( t("users.validation.errors.empty_description") )
+    end
+
+    if @errors.present?
+      flash[:error]  = t("users.create.flash_error")
+      render 'inquiry', :layout => 'welcome'
+    else
+      Notifier.delay.invitation_inquiry ( @email, @message )
+      flash[:notice] = t("welcome", :scope => "invitations.inquiry")
+
+      redirect_to root_path
+    end
+  end
+  
   def new
     set_page_title(t("invitations.new.title"))
     @fetching_contacts = params[:wait].present?

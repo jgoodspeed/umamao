@@ -1,6 +1,8 @@
 en:
    mailers:
      notifications:
+       invitation_inquiry:
+         subject: "New advisor invitation inquiry"
        new_question:
          subject: "New question in topic %{topic}"
        new_answer:

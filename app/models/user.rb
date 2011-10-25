@@ -213,6 +213,10 @@ class User
     self.affiliations.any?(&:confirmed?)
   end
 
+  def is_advisor?
+    self.admin? || self.account_type.eql?(I18n.t("users.account_type.financial_advisor"))
+  end
+
   # Return true iff the user is affiliated with the university through
   # an affiliation object.
   def affiliated_with?(university)

@@ -65,6 +65,9 @@ class UsersController < ApplicationController
 
       if @invitation
         @user.email = @invitation[:recipient_email]
+        if @invitation.account_type
+          @user.account_type = @invitation.account_type
+        end
         if (m = @user.email.match(/^[a-z](\d{6})@dac.unicamp.br$/)) &&
            (student = Student.find_by_code(m[1], :university_id => University.
                                            find_by_short_name("Unicamp").id))
@@ -133,6 +136,10 @@ class UsersController < ApplicationController
 
     if invitation = Invitation.find_by_invitation_token(@user.invitation_token)
       tracking_properties[:invited_by] = invitation.sender.email
+
+      if invitation.account_type
+        @user.account_type = invitation.account_type
+      end
 
       if m = invitation.recipient_email.match("^[a-z](\d{6})@dac.unicamp.br$")
         unicamp = University.find_by_short_name('Unicamp')

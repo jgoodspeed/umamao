@@ -17,6 +17,7 @@ en:
         empty_password: The password is empty
         long_bio: Short biography can not exceed 140 characters
         long_description: Long biography can not exceed 500 characters
+        empty_description: Short description is empty. Please, provide some information about your financial advisor experience!
     index:
       title: All users
       empty: "Not a user yet? Join in by signing up."
@@ -91,7 +92,7 @@ en:
       resend_confirmation_email: "Resend confirmation e-mail."
       resent_confirmation: "Check your e-mail address!"
     create:
-      flash_error: "Sorry, it was possible to create your account. Try again or contact us (in the feedback link at the bottom of the page)."
+      flash_error: "Sorry, it was not possible to create your account. Try again or contact us (in the feedback link at the left of the page)."
       welcome: "Registration done. Welcome to StockCrunch!"
       confirm: "Thank you for registering! Before you enter, you must confirm your email address. Soon you should receive an email with a link to confirmation"
     messages:
@@ -149,7 +150,7 @@ en:
         account_type:
           company: Company
           corporate: Corporate
-          advisor: Financial Advisor
+          financial_advisor: Financial Advisor
           personal: Investor
         gender:
           title: Gender

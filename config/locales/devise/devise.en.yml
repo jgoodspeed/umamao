@@ -42,6 +42,14 @@ en:
         resend_confirmation_instructions: Resend confirmation instructions
         submit: Send Instructions
     registrations:
+      inquiry:
+        answer: |
+          Everybody can post a question, but to ensure best quality 
+          only financial advisors can post answers.<br />
+          If you know the best answer for this question,
+          please <a href="/invitations/inquiry">introduce yourself as a financial advisor</a>!
+        or: or<br />
+        text: request financial advisor invitation
       link: Register
       signed_up: 'We have received your registration. You will receive an email confirmation soon.'
       updated: 'Your account has been updated.'

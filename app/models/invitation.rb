@@ -16,6 +16,7 @@ class Invitation
   key :invitation_token, String, :index => true
   key :sent_at, Time
   key :group_id, String
+  key :account_type, String
   belongs_to :group
 
   key :topic_ids, Array
@@ -50,6 +51,7 @@ class Invitation
       invitation =
         sender.invitations.first(:recipient_email => email) ||
         Invitation.new(:sender_id => sender.id,
+                       :account_type => sender.admin? ? I18n.t("users.account_type.financial_advisor") : nil,
                        :group_id => group.id,
                        :message => message,
                        :recipient_email => email)

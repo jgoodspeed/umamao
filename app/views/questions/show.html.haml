@@ -84,7 +84,7 @@
   = will_paginate(@answers)
 
 -# New answer form
-- unless @question.closed
+- unless @question.closed || !(current_user.present? ? current_user.is_advisor? : false )
   - if logged_in? && !@answers.map(&:user_id).include?(current_user.id) && current_user.can_post_more_answers_on?(@question)
     #new-answer-wrapper
       = form_for @answer,
@@ -103,6 +103,8 @@
       %p= t("answers.form.not_logged", :link => new_user_session_path)
     - else
       = render :partial => "questions/already_answered", :locals => {:answer => Answer.first(:question_id => @question.id, :user_id => current_user.id)}
+- else
+  = t("devise.registrations.inquiry.answer")
 
 - content_for :sidebar do
   - if logged_in? && current_user != @question.user
