@@ -2,6 +2,8 @@ class InvitationsController < ApplicationController
   before_filter :login_required, :only => [ :pending, :accepted, :resend, :new, :create,
                                             :new_invitation_student, :create_invitation_student ]
 
+  before_filter :check_permissions, :only => [:generate, :generate_invite]
+
   def pending
     @pending_invitations = Invitation.query(:sender_id => current_user.id,
                                             :accepted_at => nil,
@@ -126,4 +128,31 @@ class InvitationsController < ApplicationController
       end
     end
   end
+
+  def generate
+    render :action => 'generate', :layout => 'welcome'
+  end
+
+  def generate_invite
+    @invitation = Invitation.new( :sender_id => current_user.id,
+      :account_type => I18n.t("users.account_type.financial_advisor") )
+    @invitation.generate_confirmation_token
+    @invitation.save(:validate => false)
+
+    render :action => 'generate', :layout => 'welcome'
+  end
+
+protected
+
+  def check_permissions
+    unless logged_in? && current_user.role.eql?("admin")
+      respond_to do |format|
+        format.html do
+          flash[:error] = I18n.t("invitations.generate.error")
+          redirect_to root_path
+        end
+      end
+    end
+  end
+
 end

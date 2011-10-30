@@ -10,7 +10,7 @@ class Invitation
   belongs_to :sender, :class_name => 'User'
   key :recipient_id, String
   belongs_to :recipient, :class_name => 'User'
-  key :recipient_email, String, :required => true, :unique => true
+  key :recipient_email, String
   key :message, String
   key :accepted_at, Time
   key :invitation_token, String, :index => true

@@ -141,14 +141,16 @@ class UsersController < ApplicationController
         @user.account_type = invitation.account_type
       end
 
-      if m = invitation.recipient_email.match("^[a-z](\d{6})@dac.unicamp.br$")
-        unicamp = University.find_by_short_name('Unicamp')
-        affiliation = Affiliation.new(:user => @user,
-                                      :university => unicamp,
-                                      :email => invitation.recipient_email,
-                                      :confirmed_at => Time.now)
-        affiliation.save
-        @user.affiliation_token = affiliation.affiliation_token
+      if invitation.recipient_email.present?
+        if m = invitation.recipient_email.match("^[a-z](\d{6})@dac.unicamp.br$")
+          unicamp = University.find_by_short_name('Unicamp')
+          affiliation = Affiliation.new(:user => @user,
+                                        :university => unicamp,
+                                        :email => invitation.recipient_email,
+                                        :confirmed_at => Time.now)
+          affiliation.save
+          @user.affiliation_token = affiliation.affiliation_token
+        end
       end
     end
 
@@ -157,6 +159,10 @@ class UsersController < ApplicationController
         invitation.topics.each do |topic|
           topic.add_follower!(@user)
         end
+      end
+
+      if invitation
+        invitation.destroy
       end
 
       if @group_invitation

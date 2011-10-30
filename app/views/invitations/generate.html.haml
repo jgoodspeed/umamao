@@ -1,0 +1,19 @@
+#main
+  %h2= t(".title")
+  %br
+
+  - if @errors.present?
+    #errorExplanation.errorExplanation
+      %ul
+        - @errors.each do |error|
+          %li= error
+
+  - if @invitation.present? && @invitation.invitation_token.present?
+    = t("invitations.generate_invite.url", :token => @invitation.invitation_token, :site => AppConfig.site)
+
+  = form_tag :controller => "invitations", :action => "generate_invite" do
+
+    .submit
+      = submit_tag t('.submit')
+      %br
+      %br

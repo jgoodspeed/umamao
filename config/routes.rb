@@ -56,6 +56,8 @@ Shapado::Application.routes.draw do
       get :accepted
       get :new_invitation_student
       get :inquiry
+      get :generate
+      post :generate_invite
       post :create_invitation_student
       post :create_inquiry
       get :resend

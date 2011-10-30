@@ -1,5 +1,11 @@
 en:
    invitations:
+     generate_invite:
+       url: "%{site}users/new?invitation_token=%{token}"
+     generate:
+       submit: Generate
+       title: Generate Invitation
+       error: Cannot generate invitation
      inquiry:
        submit: Submit
        title: Invite inquiry form
