@@ -35,7 +35,16 @@ en:
        admin: Administrator
        moderate: Moderator
      about:
-       title: "StockCrunch is a question and answer forum for the stock market and economy created by Kejami Software. <br /> Constantly expanded and improved upon by moderators and professionals, StockCrunch seeks to fix<br /> the broken 'stock bulletin board' and become a quality resource for investors.<br /><br />"
+       title: |
+         What is StockCrunch? 
+         StockCrunch is a Question and Answer forum for the stock market and economy. 
+         We enable investors to have their questions answered by only experienced traders and advisors.  
+         Get started by asking a question or following a stock or topic of interest.
+       title_text: |
+         What is StockCrunch?<br /><br /><br />
+         StockCrunch is a Question and Answer forum for the stock market and economy.<br /><br />
+         We enable investors to have their questions answered by only experienced traders and advisors.<br /><br /> 
+         Get started by asking a question or following a stock or topic of interest.<br /><br /><br /><br />
      notifications:
        title: Notifications
      news_item:

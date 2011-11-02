@@ -104,7 +104,11 @@
     - else
       = render :partial => "questions/already_answered", :locals => {:answer => Answer.first(:question_id => @question.id, :user_id => current_user.id)}
 - else
-  = t("devise.registrations.inquiry.answer")
+  %h1.navtitle.title.entry-title.question-title-col
+    = t("devise.registrations.inquiry.answer_1")
+  = t("devise.registrations.inquiry.answer_2")
+  .clear
+  #register-new-user= link_to t("devise.registrations.register"), "/invitations/inquiry"
 
 - content_for :sidebar do
   - if logged_in? && current_user != @question.user

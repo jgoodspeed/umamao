@@ -8,7 +8,10 @@ en:
        error: Cannot generate invitation
      inquiry:
        submit: Submit
-       title: Invite inquiry form
+       title: |
+         Simply provide your email and any links that demonstrate you would be a good StockCrunch advisor.<br /><br /> 
+         We welcome all traders, financial advisors and experienced investors.<br /><br />
+         Thanks for your interest!
        already_registered: Already have an account at StockCrunch? <br /><a href="/users/login">Login</a> to enter.
        message: Please, describe yourself
        welcome: Your invitation inquiry is accepted. You will receive your invitation email soon.
