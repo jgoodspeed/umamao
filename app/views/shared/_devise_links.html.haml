@@ -2,7 +2,11 @@
   = link_to t('devise.sessions.link'), new_session_path(resource_name)
   %br
 
-= link_to t('devise.registrations.link'), new_user_path
+#register-new-user= link_to t("devise.registrations.link"), new_user_path
+.clear
+#register-or= t("devise.registrations.inquiry.or")
+#register-inquiry= link_to t("devise.registrations.inquiry.text"), "/invitations/inquiry"
+%br
 %br
 
 - if devise_mapping.recoverable? && controller_name != 'passwords'

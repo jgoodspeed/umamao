@@ -108,7 +108,10 @@
     = t("devise.registrations.inquiry.answer_1")
   = t("devise.registrations.inquiry.answer_2")
   .clear
-  #register-new-user= link_to t("devise.registrations.register"), "/invitations/inquiry"
+  #register-new-user= link_to t("devise.registrations.link"), new_user_path
+  .clear
+  #register-or= t("devise.registrations.inquiry.or")
+  #register-inquiry= link_to t("devise.registrations.inquiry.text"), "/invitations/inquiry"
 
 - content_for :sidebar do
   - if logged_in? && current_user != @question.user
