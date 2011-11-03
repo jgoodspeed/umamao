@@ -42,11 +42,13 @@ en:
       already_registered: Already have an account at StockCrunch? <br /><a href="/users/login">Login</a> to enter.
     news_update:
       question:
+        title: Title
         user:
           created: "%{origin} added a question."
         topic:
           creates: "Question added to the topic %{origin}."
       answer:
+        title: Title
         user:
           created: "%{origin} added a response."
         topic:
