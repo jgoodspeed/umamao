@@ -44,7 +44,8 @@ en:
     registrations:
       inquiry:
         answer_1: Can you Answer this Question?
-        answer_2: |
+        answer_2: Login to Answer
+        answer_3: |
           <br />You need to be an approved StockCrunch Advisor to answer questions.
           Anyone can apply with a quick registration below.
         or: or<br />

@@ -19,7 +19,7 @@ en:
         long_description: Long biography can not exceed 500 characters
         empty_description: Short description is empty. Please, provide some information about your financial advisor experience!
     index:
-      title: All users
+      title: Recent users
       empty: "Not a user yet? Join in by signing up."
       filter: "Search Users"
       reputation: Reputation

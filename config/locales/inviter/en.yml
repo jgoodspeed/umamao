@@ -3,7 +3,7 @@ en:
     invitation:
       subject: "%{inviter} invited you to join StockCrunch!"
       greeting: Hello!
-      sender: "%{user} thinks you should join the StockCrunch:"
+      sender: "Welcome to StockCrunch!"
       sender_topic: "%{user} invited you to discuss %{topic} in StockCrunch:"
       site_description: |
         StockCrunch is a daily question and answer forum for stocks and economy moderated and ranked by its participants.
