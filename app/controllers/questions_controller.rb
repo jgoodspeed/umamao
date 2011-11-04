@@ -207,7 +207,7 @@ class QuestionsController < ApplicationController
                              parent_question_id], params[:question])
     @question.group = current_group
     @question.user = current_user
-    @question.topics = Topic.from_titles!(params[:question][:topics])
+    @question.topics = Topic.from_titles!(params[:question][:topics], current_user)
 
     if params[:question][:question_list].present?
       @question_list = QuestionList.find_by_id(params[:question][:question_list])
