@@ -111,7 +111,7 @@ class Vote
 
   # Include the vote on the group of the voted entity.
   def add_to_group
-    self.group = self.voteable.group
+    self.group = self.voteable.group if self.voteable
   end
 
   def check_previous_vote
