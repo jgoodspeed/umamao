@@ -3,31 +3,32 @@
 - entry = news_update.entry
 - entry_type = news_update.entry_type.downcase
 - question = (entry_type == 'question') ? entry : entry.question
-- title = h(question.title)
+- if question.present?
+  - title = h(question.title)
 
-- unless question.banned || entry.banned
-  %li.entry.item
-    -# News_update Summary
-    .summary
-      - cache("user_news_update.#{entry.id}.#{entry.updated_at}.#{question.updated_at}") do
-        %h3= link_to title, question_path(question), :title => truncate(entry.body, :length => 200)
-        .origin
-          - if question.topics.any?
-            - topic = question.topics.first
-            .description= t(".#{entry_type}.topic.#{action}", :origin => link_to_topic(topic))
-          - else
-            .description= t(".#{entry_type}.user.#{action}", :origin => link_to(author.name, url_for(author)))
-      - if entry_type == "answer"
-        = render :partial => 'questions/answer', :object => entry, :locals => {:question => question, :answer => entry, :hide_controls => true}
+  - unless question.banned || entry.banned
+    %li.entry.item
+      -# News_update Summary
+      .summary
+        - cache("user_news_update.#{entry.id}.#{entry.updated_at}.#{question.updated_at}") do
+          %h3= link_to title, question_path(question), :title => truncate(entry.body, :length => 200)
+          .origin
+            - if question.topics.any?
+              - topic = question.topics.first
+              .description= t(".#{entry_type}.topic.#{action}", :origin => link_to_topic(topic))
+            - else
+              .description= t(".#{entry_type}.user.#{action}", :origin => link_to(author.name, url_for(author)))
+        - if entry_type == "answer"
+          = render :partial => 'questions/answer', :object => entry, :locals => {:question => question, :answer => entry, :hide_controls => true}
 
-      -# News_update Stats
-      .info
-        .metadata
-          = t("time.ago", :time => time_ago_in_words(entry.created_at))
-          \|
-          = format_number(question.answers_count)
-          = t(:answer_count, :scope => "activerecord.models", :count => question.answers_count)
-          - if logged_in? && current_user != question.user
-            -# Can watch the question
+        -# News_update Stats
+        .info
+          .metadata
+            = t("time.ago", :time => time_ago_in_words(entry.created_at))
             \|
-            = follow_button question
+            = format_number(question.answers_count)
+            = t(:answer_count, :scope => "activerecord.models", :count => question.answers_count)
+            - if logged_in? && current_user != question.user
+              -# Can watch the question
+              \|
+              = follow_button question
