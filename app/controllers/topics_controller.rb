@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
   before_filter :login_required, :only => [
     :edit, :update, :follow, :unfollow, :ignore, :unignore,
-    :toggle_email_subscription
+    :toggle_email_subscription, :classify
   ]
   before_filter :check_update_permissions, :only => [:edit, :update]
   respond_to :html
@@ -512,6 +512,18 @@ class TopicsController < ApplicationController
     @questions = Question.query(
       :user_id => params[:user_id], :topic_ids => @topic.id
     ).paginate(:per_page => 10, :page => params[:page] || 1)
+  end
+
+  def classify
+    Topic.from_titles!(params[:question][:topics], current_user).each do |topic|
+      topic.add_follower!(current_user)
+    end
+    
+    respond_to do |format|
+      format.js do
+        render :success => true
+      end
+    end
   end
 
   protected

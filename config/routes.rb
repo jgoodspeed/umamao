@@ -1,6 +1,7 @@
 Shapado::Application.routes.draw do
 
   match '/topics/autocomplete' => 'topics#autocomplete'
+  match '/topics/classify' => 'topics#classify'
   match '/unanswered' => 'welcome#unanswered', :as => :unanswered
   get '/notifications' => 'welcome#notifications', :as => :notifications
 

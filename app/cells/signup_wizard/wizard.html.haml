@@ -12,6 +12,15 @@
     %h2
       = "#{t("signup_wizard.#{@current_step}")} (#{@steps.index(@current_step) + 1}/#{@steps.length})"
 
+    - if @current_step == "follow"
+      %form
+        #content
+          %h3.title
+            = t("followable.suggestions.stocks")
+          #question-details
+            .group
+              = render :partial => "../views/shared/classify", :locals => {:classifiable => Question.new, :ajax_add => false}
+
     #content
       - case @current_step
       - when "connect"
@@ -28,9 +37,6 @@
       - if @next_step
         = link_to t("navigation.next"), wizard_path(@next_step)
       - else
-        = link_to t("signup_wizard.finish"), wizard_path("finish"), :class => "finish"
-
-    - if @next_step
-      = link_to t("signup_wizard.skip"), wizard_path("skip"), :class => "skip"
+        = link_to t("signup_wizard.finish"), wizard_path("finish"), :class => "finish", :id => "finish-classify"
 
     .clear

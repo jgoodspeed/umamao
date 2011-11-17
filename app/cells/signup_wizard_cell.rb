@@ -3,7 +3,10 @@
 
 class SignupWizardCell < Cell::Rails
   include Devise::Controllers::Helpers
+  include AuthenticatedSystem
   helper ApplicationHelper
+  helper SearchesHelper
+  helper TopicsHelper
   helper_method :current_user
 
   def wizard

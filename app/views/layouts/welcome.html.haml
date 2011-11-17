@@ -10,6 +10,7 @@
     <!--[if lt IE 8]><link type="text/css" rel="stylesheet" media="screen" href="/stylesheets/ie7.css"><![endif]-->
     = include_javascripts :base
     = yield :js
+    %link{"rel" => "search", "type" => "application/opensearchdescription+xml", "href" => "/content-search.xml", "title" => "Content Search"}
 
   %body.bp
     ~ AppConfig.beginning_of_body_tag if Rails.env.production?

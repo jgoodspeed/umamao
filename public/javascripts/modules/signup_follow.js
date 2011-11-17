@@ -14,4 +14,18 @@ $(document).ready(function () {
       }
     });
   }
+
+  $("#finish-classify").click( function() {
+    $.ajax({
+      url: "/topics/classify.js",
+      type: "POST",
+      data: $(document).find("form").serialize(),
+      success: function(data) {
+        window.location.href = "/signup/finish";
+        return false;
+      }
+    });
+    return false;
+  });
+
 });
