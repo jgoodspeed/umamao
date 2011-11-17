@@ -515,12 +515,10 @@ class TopicsController < ApplicationController
   end
 
   def classify
-    topics = Topic.from_titles!(params[:question][:topics], current_user)
-    
-    if topics.present?
-      topics.each do |topic|
-        topic.add_follower!(current_user)
-      end
+    topics = Topic.from_titles!(params[:question][:topics], current_user) if params[:question].present?
+
+    topics.each do |topic| if topics.present? 
+      topic.add_follower!(current_user)
     end
     
     respond_to do |format|
