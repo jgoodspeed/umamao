@@ -29,6 +29,25 @@ class SuggestionsCell < Cell::Rails
       topic_suggestions = current_user.topic_suggestions[0 .. 7 - @suggested_topics.size]
       @suggested_topics +=
         Topic.all(:id.in => topic_suggestions.map(&:entry_id))
+    elsif AppConfig.top_bar and options.present? and options[:categories]
+      topics = []
+      AppConfig.top_bar.each do |group_of_links|
+        group_of_links.each do |link|
+          topics << link[0].tr(' ','-')
+        end
+      end
+      topics_length = topics.length
+      left_last = [6, (topics_length/2.0).ceil - 1].min
+      right_first = [7, (topics_length/2.0).ceil].min
+      right_last = [13, topics_length].min
+
+      topic_suggestions_left = topics[0 .. left_last]
+      topic_suggestions_right = topics[right_first .. right_last]
+      @suggested_topics_left =
+        Topic.query(:slug.in => topic_suggestions_left).reject {|topic| topic.is_followed_by? (current_user) }
+      @suggested_topics_right =
+        Topic.query(:slug.in => topic_suggestions_right).reject {|topic| topic.is_followed_by? (current_user) }
+      @categories = true
     else
       # Calculate the bounds to each column
       left_last = [6, (current_user.topic_suggestions.length/2.0).ceil - 1].min

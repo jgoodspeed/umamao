@@ -10,15 +10,18 @@
       .follow-info
         = link_to "#{t("followable.follow")}",
           follow_topic_path(topic, :single_column => single_column,
+                            :categories => categories,
                             :suggestion => true, :format => :js),
           :class => "follow_link", :method => :post,
           :remote => true, "data-type" => "json"
-      .refuse-suggestion
-        = link_to "✕",
-          refuse_suggestion_path(:topic => topic.id,
-                                 :single_column => single_column,
-                                 :format => :js),
-          :method => :post, :remote => true, "data-type" => "json"
+      - unless categories
+        .refuse-suggestion
+          = link_to "✕",
+            refuse_suggestion_path(:topic => topic.id,
+                                   :categories => categories,
+                                   :single_column => single_column,
+                                   :format => :js),
+            :method => :post, :remote => true, "data-type" => "json"
     - if users
       .suggested-by
         = t("user_suggestions.suggested_by", :user => users.first.first_name, :count => users.count, :others => "outros")

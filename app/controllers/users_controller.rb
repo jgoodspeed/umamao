@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     set_page_title(t("users.index.title"))
     options =  {:per_page => params[:per_page]||24,
                :order => current_order,
+               :account_type => I18n.t("users.account_type.financial_advisor"),
                :page => params[:page] || 1}
     options[:login] = /^#{Regexp.escape(params[:q])}/ if params[:q]
 

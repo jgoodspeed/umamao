@@ -77,7 +77,7 @@ class SuggestionsController < ApplicationController
           :message => t('user_suggestions.refuse.notice')
         }
         if type
-          request_answer[:suggestions] = render_cell :suggestions, type, :single_column => params[:single_column]
+          request_answer[:suggestions] = render_cell :suggestions, type, :single_column => params[:single_column], :categories => params[:categories] 
         end
         render :json => request_answer.to_json
       end

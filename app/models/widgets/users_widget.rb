@@ -4,7 +4,8 @@ class UsersWidget < Widget
 
   def recent_users(group)
     group.paginate_users(:order => "created_at desc",
-                :per_page => 5,
+                :per_page => 10,
+                :account_type => I18n.t("users.account_type.financial_advisor"),
                 :page => 1)
   end
 

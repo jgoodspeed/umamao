@@ -5,8 +5,8 @@
     %br
     .suggestion-left
       %ul.topic-list
-        = render :partial => "topic_list", :locals => {:topics => @suggested_topics_left, :single_column => false}
+        = render :partial => "topic_list", :locals => {:topics => @suggested_topics_left, :single_column => false, :categories => @categories}
   - if !@suggested_topics_right.blank?
     .suggestion-right
       %ul.topic-list
-        = render :partial => "topic_list", :locals => {:topics => @suggested_topics_right, :single_column => false}
+        = render :partial => "topic_list", :locals => {:topics => @suggested_topics_right, :single_column => false, :categories => @categories}

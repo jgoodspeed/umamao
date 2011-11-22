@@ -49,8 +49,8 @@ en:
           <br />You need to be an approved StockCrunch Advisor to answer questions.
           Anyone can apply with a quick registration below.
         or: or<br />
-        text: Advisors Apply Here
-      link: Investors Register Here
+        text: Pros Apply Here
+      link: Register to Ask
       register: Register
       signed_up: 'We have received your registration. You will receive an email confirmation soon.'
       updated: 'Your account has been updated.'
