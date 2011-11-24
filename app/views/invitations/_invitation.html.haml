@@ -1,8 +1,9 @@
 %li.item
   / User Summary
   .summary
-    .avatar
-      = avatar_for(invitation.recipient, :size => 72) || gravatar(invitation.recipient_email, :size => 72)
+    - if invitation.recipient_email.present?
+      .avatar
+        = avatar_for(invitation.recipient, :size => 72) || gravatar(invitation.recipient_email, :size => 72)
     = invitation.accepted_at ? link_to(h(invitation.recipient.name),
       user_path(invitation.recipient)) : "#{invitation.recipient_email}:"
     .info
