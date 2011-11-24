@@ -57,26 +57,34 @@ class UsersController < ApplicationController
       end
     end
 
+    # Financial advisor added by invitation
+    @invitation = nil
+    if params[:invitation_token]
+      @invitation = Invitation.find_by_invitation_token(params[:invitation_token])
+      if @invitation && @invitation.account_type && @invitation.account_type == I18n.t("users.account_type.financial_advisor") 
+        user = User.find_by_email(@invitation[:recipient_email])
+        if user
+          user.account_type = @invitation.account_type
+          user.save!
+          redirect_to(new_user_session_path) && return
+        end
+      end
+    end
+
     @user = User.new
 
     # User added by invitation
-    if params[:invitation_token]
-    @invitation = Invitation.
-      find_by_invitation_token(params[:invitation_token])
-
-      if @invitation
-        @user.email = @invitation[:recipient_email]
-        if @invitation.account_type
-          @user.account_type = @invitation.account_type
-        end
-        if (m = @user.email.match(/^[a-z](\d{6})@dac.unicamp.br$/)) &&
-           (student = Student.find_by_code(m[1], :university_id => University.
-                                           find_by_short_name("Unicamp").id))
-          @user.name = student.name
-        end
-        @user.invitation_token = @invitation.invitation_token
+    if @invitation
+      @user.email = @invitation[:recipient_email]
+      if @invitation.account_type
+        @user.account_type = @invitation.account_type
       end
-
+      if (m = @user.email.match(/^[a-z](\d{6})@dac.unicamp.br$/)) &&
+         (student = Student.find_by_code(m[1], :university_id => University.
+                                         find_by_short_name("Unicamp").id))
+        @user.name = student.name
+      end
+      @user.invitation_token = @invitation.invitation_token
     end
 
     # User added by affiliation

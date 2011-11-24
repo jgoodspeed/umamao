@@ -65,6 +65,14 @@ class Invitation
         end
       end
 
+      if !invitation.new? && !saved
+        if sender.admin? 
+          invitation.account_type = I18n.t("users.account_type.financial_advisor")
+          invitation.save!
+        end
+        invitation.send_invitation
+      end
+
       if (!invitation.new? || saved) &&
           (contact = sender.contacts.first(:email => email))
         contact.invitation = invitation
@@ -88,8 +96,12 @@ class Invitation
 
   private
   def recipient_is_not_user
-    if User.find_by_email(self.recipient_email)
-      self.errors.add(:email, "already registered in StockCrunch!")
+    user = User.find_by_email(self.recipient_email)
+    if user
+      unless ( user.account_type == I18n.t("users.account_type.personal") &&
+               self.account_type == I18n.t("users.account_type.financial_advisor") )
+        self.errors.add(:email, "already registered in StockCrunch!")
+      end
     end
   end
 
