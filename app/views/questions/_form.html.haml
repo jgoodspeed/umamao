@@ -17,9 +17,14 @@
     %ul#inline-autocomplete-list.autocomplete-list
     = render :partial => "content_images/content_images",
       :locals => { :entry => @question }
-    = render :partial => "shared/preview_pane"
 
   - if topics
+    %hr
+    .group
+      %label.label
+        = t("searches.form.choose_topics")
+    .group
+      = render :partial => "shared/classify_categories", :locals => {:classifiable => @question, :ajax_add => false}
     %hr
     .group
       = render :partial => "shared/classify", :locals => {:classifiable => @question, :ajax_add => false}

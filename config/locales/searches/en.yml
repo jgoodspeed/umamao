@@ -14,9 +14,10 @@ en:
       search_box_title: "See if your question has already been answered by someone"
       tags_tip: Use [topic] or [stock symbol] to specify topics or stocks.
       search_all: "search for questions, stocks, topics and users"
-      follow_topics: Search topics
-      ignore_topics: Search topics
-      select_topics: Select topics
+      follow_topics: Follow topics
+      ignore_topics: Ignore topics
+      select_topics: Add more Tags
+      choose_topics: Choose a Category
     question:
       answers:
         one: 1 answer

@@ -30,7 +30,7 @@ function updateAutocompleteText(element, str, url) {
 
   $(element).val(
     val.substring(0,s-1) + "[" + str + "]" +
-    "(http://umamao.com" + url + ") " +
+    "(http://stockcrunch.com" + url + ") " +
     val.substring(e,val.length)
   );
 

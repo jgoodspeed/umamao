@@ -1,0 +1,12 @@
+
+#topic-suggestions
+  - if AppConfig.top_bar
+    - AppConfig.top_bar.each do |group_of_links|
+      %ul.topic-list
+        - group_of_links.each do |link|
+          %li
+            .topic.category-topic
+              %span.topic-title
+                - Topic.query(:slug.in => link[0].tr(' ','-').collect).each do |topic|
+                  = link_to_topic topic, :classifiable => classifiable, :render_follow_button => false, :title => link[0], :class => "categories-link"
+

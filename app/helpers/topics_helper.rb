@@ -41,7 +41,11 @@ module TopicsHelper
     text ||= topic.title
     options ||= {}
 
-    link_to h(text), topic_url(topic), :data => h(topic_tooltip(topic, options))
+    if options[:title].present? && options[:class].present?
+      link_to h(text), topic_url(topic), :class => options[:class], :title => options[:title], :data => h(topic_tooltip(topic, options))
+    else
+      link_to h(text), topic_url(topic), :data => h(topic_tooltip(topic, options))
+    end
   end
 
   def topic_tooltip(topic, options = {})

@@ -9,6 +9,19 @@ function initTopicAutocompleteForForms(classifiable) {
     return false;
   });
 
+  $(".category-topic").live("click", function() {
+    var title = $(this).find(".categories-link").attr("title");
+    if ( $("#classify-ul").text().indexOf(title) == -1 )
+    {
+	    var topicLi = '<li><div class="topic">' +
+	      '<span class="topic-title">${title}</span>' +
+	      '<a class="remove" href="#">✕</a></div><input type="hidden" ' +
+	      'name="${classifiable}[topics][]" value="${title}" /></li>';
+	    topicsUl.append($.tmpl(topicLi, {title: title, classifiable: classifiable}));
+	}
+    return false;
+  });
+
   $(".topic .remove").live("click", function () {
     $(this).closest("li").remove();
     return false;
